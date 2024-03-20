@@ -1,4 +1,5 @@
 <?php require "assets/include/head.php"; ?>
+
 <body>
   <main>
     <?php require "assets/include/header.php"; ?>
@@ -6,34 +7,72 @@
       <div class="row title mt-5 mb-5">
         <p class="h1 w-100 text-center font-weight-bold">Todos esses projetos, e vários outros, podem ser encontrados no meu <a target="_blank" href="https://github.com/wiliangulini">github</a></p>
       </div>
-      <div class="row portfolio mb-5">
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4" id="imgs3">
-          <img src="assets/images/construtora_acredite.png" alt="site da construtora acredite">
-          <p class="h4">Site da Construtora Acredite, desenvolvido como freela pela empresa Gulini.Dev</p>
+      <div class="row portfolio mb-5 justify-content-between">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs0">
+          <a target="_blank" href="https://www.oniun.com.br/">
+            <img src="assets/images/oniun.png" alt="site da Oniun">
+            <div class="txtCard d-flex flex-column align-items-start">
+              <p class="h5 font-weight-bold">Site da Oniun</p>
+              <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela.</p>
+            </div>
+          </a>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4" id="imgs4">
-          <img src="assets/images/oniun.png" alt="site da Oniun">
-          <p class="h4">Site da Oniun, desenvolvido como freela pela empresa Gulini.Dev</p>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4" id="imgs5">
-          <img src="assets/images/lavanderia.png" alt="sistema de controle de estoque de lavanderia.">
-          <p class="h4">Controle de estoque feito pra Lavanderia Beltrão (usando Angular e Spring), desenvolvido como freela pela empresa Gulini.Dev</p>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs1">
+          <a target="_blank" href="http://localhost/construtora-acredite/">
+            <img src="assets/images/construtora_acredite.png" alt="site da construtora acredite">
+            <div class="txtCard d-flex flex-column align-items-start">
+              <p class="h5 font-weight-bold">Site da Construtora Acredite</p>
+              <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela.</p>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="row portfolio">
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4" id="imgs0">
-          <img src="assets/images/fronter.png" alt="foto do site da Fronter">
-          <p class="h4">Site da Fronter desenvolvido enquanto trabalhava pro Eyhe, o dono do Eyhe é tambem da Fronter. Os Portfólios de <a href="https://fronter.eng.br/saneamento/">saneamento</a>,  <a href="https://fronter.eng.br/eletricidade/">eletricidade</a>,  <a href="https://fronter.eng.br/energia/">energia</a> tambem foram feitos por mim. </p>
+      <div class="row portfolio mb-5 justify-content-between">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs2">
+          <a target="_blank" href="https://cegonhabox.com.br/baby/">
+            <img src="assets/images/cegonhabox.png" alt="foto do site da CegonhaBox">
+            <div class="txtCard d-flex flex-column align-items-start">
+              <p class="h5 font-weight-bold">Site da CegonhaBox</p>
+              <p class="h6">Desenvolvido por mim enquanto trabalhava pra Engenharia Digital.</p>
+            </div>
+          </a>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4" id="imgs1">
-          <img src="assets/images/cegonhabox.png" alt="foto do site da CegonhaBox">
-          <p class="h4">Site da CegonhaBox desenvolvido enquanto trabalhava pra Engenharia Digital.</p>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs3">
+          <a target="_blank" href="https://www.elitefm.com.br/">
+            <img src="assets/images/elitefm.png" alt="foto do site da EliteFM">
+            <div class="txtCard d-flex flex-column align-items-start">
+              <p class="h5 font-weight-bold">Site da EliteFM</p>
+              <p class="h6">Desenvolvido por mim enquanto trabalhava pra Engenharia Digital.</p>
+            </div>
+          </a>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4" id="imgs2">
-          <img src="assets/images/elitefm.png" alt="foto do site da EliteFM">
-          <p class="h4">Site da EliteFM desenvolvido enquanto trabalhava pra Engenharia Digital.</p>
+      </div>
+      <div class="row portfolio mb-5 justify-content-between">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs4">
+          <a target="_blank" href="https://fronter.eng.br/">
+            <img src="assets/images/fronter.png" alt="foto do site da Fronter">
+            <div class="txtCard fronter d-flex flex-column align-items-start">
+              <p class="h5 font-weight-bold">Site e Portfolios da Fronter</p>
+              <p class="h6">Desenvolvido por mim enquanto trabalhava pro Eyhe.</p>
+            </div>
+          </a>  
+            <p class="h6 pf">Portfólios: <a target="_blank" class="fS" href="https://fronter.eng.br/saneamento/">Saneamento</a>, <a target="_blank" href="https://fronter.eng.br/eletricidade/" class="fEl">Eletricidade</a>, <a target="_blank" class="fEn" href="https://fronter.eng.br/energia/">Energia</a>.</p>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs5">
+          <a target="_blank" href="https://lavanderia-e5a18.firebaseapp.com/">
+            <img src="assets/images/lavanderia.png" alt="sistema de controle de estoque de lavanderia.">
+            <div class="txtCard d-flex flex-column align-items-start">
+              <p class="h5 font-weight-bold">Controle de Estoque</p>
+              <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela. Angular e Spring utilizados</p>
+              <small>contém apenas o link do front-end no firebase pois é apenas pra empresa ter acesso.</small>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/header.js"></script>
 </body>

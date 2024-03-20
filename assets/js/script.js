@@ -98,14 +98,14 @@ let header = document.querySelector('header');
 let a1 = document.querySelector('.a1');
 let a2 = document.querySelector('.a2');
 let a3 = document.querySelector('.a3');
+let a4 = document.querySelector('.a4');
 let spanHome = document.querySelector('.spanHome');
 let spanAbout = document.querySelector('.spanAbout');
 let spanResume = document.querySelector('.spanResume');
-let home = document.getElementById('home');
 let svg = document.querySelector('.svg');
 let menu = document.querySelector('header .container .linha nav button svg');
 let body = document.querySelector('body');
-let jhow = document.querySelector('a.navbar-brand');
+let gulini = document.querySelector('a.navbar-brand');
 let spanAll = document.querySelectorAll('a.nav-link span');
 let navbarNav = document.querySelector('#navbarNav');
 let esperiencia = document.querySelector('li.experience a');
@@ -147,7 +147,7 @@ if(screen.width > 768) {
 let e = $('#education');
 let el = $('#skills');
 let ele = $('#experienceInt');
-// let elem = $('#experienceInt2');
+let h2 = $('#home');
 let elm = $('#animate');
 let elemento = $('#animate1');
 let element1 = $('#pb');
@@ -193,46 +193,41 @@ if(screen.width < 768) {
 
 }
 
+a4?.addEventListener('click', () => {
+  a1.classList.remove('active');
+  a2.classList.remove('active');
+  a3.classList.remove('active');
+  a4.classList.add('active');
+});
+
+let sWidth = () => {
+  if(screen.width > 768) {
+    a1.classList.remove('active');
+    a2.classList.remove('active');
+    a3.classList.add('active');
+  } else if(screen.width <= 768) {
+    spanHome.classList.remove('active');
+    spanAbout.classList.remove('active');
+    spanResume.classList.add('active');
+  }
+}
 
 $(window).on('scroll', function() {
   if(isScrolledIntoView(e)) {
     if(!executed) {
         $(() => {
           edActive();
-          if(screen.width > 768) {
-            a1.classList.remove('active');
-            a2.classList.remove('active');
-            a3.classList.add('active');
-          } else if(screen.width <= 768) {
-            spanHome.classList.remove('active');
-            spanAbout.classList.remove('active');
-            spanResume.classList.add('active');
-          }
+          sWidth();
         });  
     }         
   } 
-  // if(isScrolledIntoView(elem)) {
-  //   if(!executed) {
-  //       $(() => {
-  //         console.log('Scrolled')
-  //         exActive();
-  //       });  
-  //   }         
-  // } 
+  
   if(isScrolledIntoView(ele)) {
     if(!executed) {
         $(() => {
           console.log('Scrolled')
           exActive();
-          if(screen.width > 768) {
-            a1.classList.remove('active');
-            a2.classList.remove('active');
-            a3.classList.add('active');
-          } else if(screen.width <= 768) {
-            spanHome.classList.remove('active');
-            spanAbout.classList.remove('active');
-            spanResume.classList.add('active');
-          }
+          sWidth();
         });  
     }         
   } 
@@ -284,7 +279,8 @@ $(window).on('scroll', function() {
       });
     }
   }
-  if(isScrolledIntoView(home)) {
+  if(isScrolledIntoView(h2)) {
+    console.log(h2);
     if(!executed) {
       $(() => {
         if(screen.width > 768) {
@@ -299,22 +295,26 @@ $(window).on('scroll', function() {
       })
     }
   }
-  if(window.scrollY >= 200) {
+
+  if (window.scrollY >= 200) {
     header.classList.add('fixed');
   } else {
+    a1.classList.add('active');
+    a2.classList.remove('active');
+    a3.classList.remove('active');
     header.classList.remove('fixed');
   }
 
   if(screen.width <= 1024) {
     if(window.scrollY >= 200) {
-      jhow.style.color = '#000';
+      gulini.style.color = '#000';
       menu.style.fill = '#000';
       navbarNav.style.backgroundColor = '#fff';
       spanAll.forEach((index) => {
         index.style.color = '#000';
       });  
     } else {
-      jhow.style.color = '#fff';
+      gulini.style.color = '#fff';
       menu.style.fill = '#fff';
       navbarNav.style.backgroundColor = '#000';
       spanAll.forEach((index) => {

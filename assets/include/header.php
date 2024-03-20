@@ -3,7 +3,7 @@
     <div class="linha w-100">
       <nav class="navbar navbar-expand-lg w-100">
         <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
-          <a class="navbar-brand" href="#"><span>G</span>ulini.Dev</a></a>
+          <a class="navbar-brand" href="index.php"><span>G</span>ulini.Dev</a></a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <svg clip-rule="evenodd" fill="#fff" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@
               <a class="nav-link a3" href="index.php#resume"><span class="spanResume">Resumo</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link a3" href="portfolio.php"><span class="spanPortfolio">Portfólio</span></a>
+              <a class="nav-link a4" href="portfolio.php"><span class="spanPortfolio">Portfólio</span></a>
             </li>
           </ul>
         </div>
