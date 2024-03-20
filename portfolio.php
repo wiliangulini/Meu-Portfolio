@@ -10,7 +10,7 @@
       <div class="row portfolio mb-5 justify-content-between">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs0">
           <a target="_blank" href="https://www.oniun.com.br/">
-            <img src="assets/images/oniun.png" alt="site da Oniun">
+            <img src="assets/images/oniun.webp" alt="site da Oniun">
             <div class="txtCard d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Site da Oniun</p>
               <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela.</p>
@@ -19,7 +19,7 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs1">
           <a target="_blank" href="https://gulini.com.br/construtora-acredite/">
-            <img src="assets/images/construtora_acredite.png" alt="site da construtora acredite">
+            <img src="assets/images/construtora_acredite.webp" alt="site da construtora acredite">
             <div class="txtCard d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Site da Construtora Acredite</p>
               <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela.</p>
@@ -30,7 +30,7 @@
       <div class="row portfolio mb-5 justify-content-between">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs2">
           <a target="_blank" href="https://cegonhabox.com.br/baby/">
-            <img src="assets/images/cegonhabox.png" alt="foto do site da CegonhaBox">
+            <img src="assets/images/cegonhabox.webp" alt="foto do site da CegonhaBox">
             <div class="txtCard d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Site da CegonhaBox</p>
               <p class="h6">Desenvolvido por mim enquanto trabalhava pra Engenharia Digital.</p>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs3">
           <a target="_blank" href="https://www.elitefm.com.br/">
-            <img src="assets/images/elitefm.png" alt="foto do site da EliteFM">
+            <img src="assets/images/elitefm.webp" alt="foto do site da EliteFM">
             <div class="txtCard d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Site da EliteFM</p>
               <p class="h6">Desenvolvido por mim enquanto trabalhava pra Engenharia Digital.</p>
@@ -50,7 +50,7 @@
       <div class="row portfolio mb-5 justify-content-between">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs4">
           <a target="_blank" href="https://fronter.eng.br/">
-            <img src="assets/images/fronter.png" alt="foto do site da Fronter">
+            <img src="assets/images/fronter.webp" alt="foto do site da Fronter">
             <div class="txtCard fronter d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Site e Portfolios da Fronter</p>
               <p class="h6">Desenvolvido por mim enquanto trabalhava pro Eyhe.</p>
@@ -60,7 +60,7 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs5">
           <a target="_blank" href="https://lavanderia-e5a18.firebaseapp.com/">
-            <img src="assets/images/lavanderia.png" alt="sistema de controle de estoque de lavanderia.">
+            <img src="assets/images/lavanderia.webp" alt="sistema de controle de estoque de lavanderia.">
             <div class="txtCard d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Controle de Estoque</p>
               <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela. Angular e Spring utilizados</p>

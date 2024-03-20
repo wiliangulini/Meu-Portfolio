@@ -12,7 +12,7 @@
     <meta name="language" content="pt-BR">
     <meta name="revisit-after" content="1 day">
     <meta name="generator" content="N/A">
-    <link rel="shortcut icon" href="assets/images/gulini.dev.png" />
+    <link rel="shortcut icon" href="assets/images/gulini.dev.webp" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

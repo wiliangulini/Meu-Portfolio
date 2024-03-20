@@ -30,7 +30,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 img d-flex justify-content-center align-items-center">
-            <img src="assets/images/wilian_gulini.png" alt="imagem de Wilian Gulini">
+            <img src="assets/images/wilian_gulini.webp" alt="imagem de Wilian Gulini">
           </div>
           <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 txt d-flex flex-column align-items-start justify-content-center pl-4">
             <div id="animate" class="w-100">
