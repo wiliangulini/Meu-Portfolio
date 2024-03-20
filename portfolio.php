@@ -18,7 +18,7 @@
           </a>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs1">
-          <a target="_blank" href="http://localhost/construtora-acredite/">
+          <a target="_blank" href="https://gulini.com.br/construtora-acredite/">
             <img src="assets/images/construtora_acredite.png" alt="site da construtora acredite">
             <div class="txtCard d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Site da Construtora Acredite</p>
@@ -72,7 +72,9 @@
     </div>
   </main>
 
+  <?php require "./assets/include/btn-whats.php"; ?>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="assets/js/header.js"></script>
 </body>
