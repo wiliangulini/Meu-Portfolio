@@ -109,7 +109,7 @@ body {
     -o-transform: scale(1);
   }
 }
-
+/* asdfasdf */
 .btn-whats {
   background-color: #38b553;
   color: #FFF;
@@ -124,6 +124,7 @@ body {
   right: 1%;
   width: 60px;
   height: 60px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

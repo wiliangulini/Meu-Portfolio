@@ -64,7 +64,7 @@
             <div class="txtCard d-flex flex-column align-items-start">
               <p class="h5 font-weight-bold">Controle de Estoque</p>
               <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela. Angular e Spring utilizados</p>
-              <small>contém apenas o link do front-end no firebase pois é apenas pra empresa ter acesso.</small>
+              <small>contém apenas o link do front-end no firebase pois é apenas pra empresa ter acesso, desenvolvido para desktop a pedido do cliente.</small>
             </div>
           </a>
         </div>

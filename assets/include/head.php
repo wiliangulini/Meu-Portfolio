@@ -3,6 +3,7 @@
   <head>
     <title>Gulini.Dev</title>
     <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="OxHg_nt7RrPYAWI2sanVcAQFt7gUmpwshnUAys7p9sc" />
     <meta name="viewport" content="width=device-width, user-scalable=0">
     <meta name="description" content="A Gulini.Dev é uma empresa que trabalha com desenvolvimento web/mobile e tambem com o desenvolvimento de software" />
     <meta name="keywords" content="Desenvolvedor front-end, desenvolvedor web, programador web, desenvolvedor de software, programador, desenvolvedor" />

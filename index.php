@@ -76,7 +76,7 @@
             </div>
             <div id="animate1" class="w-100">
               <p class="h4"><span class="blue">22 </span>Projetos Completos</p>
-              <a class="download" download href="assets/Profile.pdf">DOWNLOAD CV</a>
+              <a class="download" download href="assets/curriculo_atualizado.pdf">DOWNLOAD CV</a>
             </div>
           </div>
         </div>
