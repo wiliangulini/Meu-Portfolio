@@ -18,7 +18,7 @@ $isPortfolio = $currentPage === 'portfolio';
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link <?php echo !$isPortfolio ? 'active' : ''; ?>" href="index.php#home" data-section="home">Início</a>
+            <a class="nav-link <?php echo !$isPortfolio ? 'active' : ''; ?>" href="index.php#home" data-section="home" <?php echo !$isPortfolio ? 'aria-current="page"' : ''; ?>>Início</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php#servicos" data-section="servicos">Serviços</a>
@@ -30,7 +30,7 @@ $isPortfolio = $currentPage === 'portfolio';
             <a class="nav-link" href="index.php#processo" data-section="processo">Processo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo $isPortfolio ? 'active' : ''; ?>" href="portfolio.php">Portfólio</a>
+            <a class="nav-link <?php echo $isPortfolio ? 'active' : ''; ?>" href="portfolio.php" <?php echo $isPortfolio ? 'aria-current="page"' : ''; ?>>Portfólio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-cta" href="index.php#contato" data-section="contato">Contato</a>

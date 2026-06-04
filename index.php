@@ -97,6 +97,30 @@ $structuredData = [
               '@type' => 'Answer',
               'text' => 'Os sites e landing pages podem incluir estrutura técnica de SEO, responsividade, metadados, sitemap e organização de conteúdo para facilitar a compreensão pelos buscadores.'
             ]
+          ],
+          [
+            '@type' => 'Question',
+            'name' => 'Quanto custa um projeto?',
+            'acceptedAnswer' => [
+              '@type' => 'Answer',
+              'text' => 'O valor varia conforme o escopo: tipo de projeto, número de páginas, funcionalidades e prazo. Para ter uma estimativa real, envie uma descrição do que precisa e retorno com uma proposta personalizada.'
+            ]
+          ],
+          [
+            '@type' => 'Question',
+            'name' => 'Qual o prazo de entrega?',
+            'acceptedAnswer' => [
+              '@type' => 'Answer',
+              'text' => 'O prazo depende do escopo e da velocidade de aprovação de conteúdo e feedback. Projetos menores podem ser entregues em poucas semanas; sistemas maiores demandam mais tempo. Prazo e etapas são definidos no início do projeto.'
+            ]
+          ],
+          [
+            '@type' => 'Question',
+            'name' => 'Como é o início do projeto?',
+            'acceptedAnswer' => [
+              '@type' => 'Answer',
+              'text' => 'Começa com um diagnóstico: entendimento do negócio, objetivos, público, conteúdo disponível e prazo. A partir disso, monta-se a estrutura de páginas, tecnologias e pontos de SEO antes de qualquer linha de código.'
+            ]
           ]
         ]
       ]
@@ -106,6 +130,7 @@ $structuredData = [
 require 'assets/include/head.php';
 ?>
   <body class="home-page">
+    <a class="skip-to-content" href="#home">Ir para o conteúdo</a>
     <main id="home">
       <section class="hero-section">
         <?php require 'assets/include/header.php'; ?>
@@ -113,8 +138,9 @@ require 'assets/include/head.php';
         <div class="container hero-content">
           <div class="hero-copy">
             <span class="section-kicker">Olá! Eu sou</span>
-            <h1>Wilian Gulini</h1>
-            <h2>Eu sou um desenvolvedor <span class="txt-rotate" aria-live="polite"></span></h2>
+            <p class="hero-name">Wilian Gulini</p>
+            <h1>Desenvolvedor de sites, landing pages e sistemas web</h1>
+            <h2>Especialista em <span class="txt-rotate" aria-live="polite"></span></h2>
             <p>Desenvolvo sites, landing pages e sistemas web sob medida para empresas em Pato Branco, Coronel Vivida e sudoeste do Paraná.</p>
             <div class="hero-actions">
               <a class="btn-primary-action" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Pedir orçamento no WhatsApp</a>
@@ -156,16 +182,19 @@ require 'assets/include/head.php';
               <span>01</span>
               <h3>Sites institucionais</h3>
               <p>Sites responsivos para apresentar sua empresa, serviços, diferenciais e canais de contato com uma estrutura clara para clientes e buscadores.</p>
+              <a class="service-card-cta" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
             </article>
             <article class="service-card">
               <span>02</span>
               <h3>Landing pages</h3>
               <p>Páginas focadas em captação de leads, campanhas, lançamentos e orçamentos, com CTA bem definido e conteúdo direto ao ponto.</p>
+              <a class="service-card-cta" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
             </article>
             <article class="service-card">
               <span>03</span>
               <h3>Sistemas web sob medida</h3>
               <p>Soluções para controle interno, estoque, dashboards e automações, usando front-end, back-end e banco de dados conforme a necessidade.</p>
+              <a class="service-card-cta" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
             </article>
           </div>
         </div>
@@ -196,6 +225,101 @@ require 'assets/include/head.php';
         </div>
       </section>
 
+      <section class="section section-light" id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Competências</span>
+            <h2>Front-end como foco, full-stack como capacidade</h2>
+            <p class="skills-positioning">Desenvolvedor Front-end com experiência em React.js, Next.js, Angular e TypeScript, também atuando com back-end, banco de dados, deploy em VPS e testes manuais. Desenvolvo sites, landing pages e sistemas web administrativos com foco em performance, responsividade e manutenção.</p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card featured">
+              <h3>Front-end</h3>
+              <p>Desenvolvimento de interfaces modernas, responsivas e performáticas com React.js, Next.js, Angular e TypeScript, incluindo consumo de APIs, autenticação, dashboards, formulários complexos e componentização.</p>
+              <div class="skill-badges">
+                <span class="skill-badge">React.js</span>
+                <span class="skill-badge">Next.js</span>
+                <span class="skill-badge">Angular</span>
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">CSS3</span>
+                <span class="skill-badge">Tailwind CSS</span>
+                <span class="skill-badge">Bootstrap</span>
+                <span class="skill-badge">Context API</span>
+                <span class="skill-badge">JWT no front-end</span>
+                <span class="skill-badge">Dashboards</span>
+                <span class="skill-badge">Responsividade</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3>Back-end</h3>
+              <p>Experiência no desenvolvimento e integração de APIs REST, autenticação JWT, CRUDs e regras de negócio utilizando Spring Boot, Node.js e PHP.</p>
+              <div class="skill-badges">
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">Spring Boot</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">PHP</span>
+                <span class="skill-badge">APIs REST</span>
+                <span class="skill-badge">JWT</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3>Banco de Dados</h3>
+              <p>Modelagem, manutenção e integração com bancos relacionais, incluindo MySQL, PostgreSQL, consultas SQL, migração de dados e relacionamento entre entidades.</p>
+              <div class="skill-badges">
+                <span class="skill-badge">MySQL</span>
+                <span class="skill-badge">PostgreSQL</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">JPA / Hibernate</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3>DevOps / Deploy</h3>
+              <p>Publicação e manutenção de aplicações web em VPS Linux, com configuração de domínio, SSL, Apache, PM2, proxy reverso e ambientes de produção.</p>
+              <div class="skill-badges">
+                <span class="skill-badge">VPS Linux</span>
+                <span class="skill-badge">Ubuntu Server</span>
+                <span class="skill-badge">Apache2</span>
+                <span class="skill-badge">PM2</span>
+                <span class="skill-badge">SSL / Let's Encrypt</span>
+                <span class="skill-badge">Proxy reverso</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3>QA / Testes</h3>
+              <p>Atuação com testes manuais, validação de regras de negócio, permissões, autenticação, filtros, dashboards e documentação clara de bugs e cenários de teste.</p>
+              <div class="skill-badges">
+                <span class="skill-badge">Testes manuais</span>
+                <span class="skill-badge">Relatórios de bugs</span>
+                <span class="skill-badge">RBAC / permissões</span>
+                <span class="skill-badge">Testes de regressão</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3>Ferramentas</h3>
+              <p>Uso de ferramentas de desenvolvimento, versionamento, deploy, testes de API e manutenção de projetos em ambiente local e produção.</p>
+              <div class="skill-badges">
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">GitHub</span>
+                <span class="skill-badge">Azure DevOps</span>
+                <span class="skill-badge">Postman</span>
+                <span class="skill-badge">VS Code</span>
+                <span class="skill-badge">IntelliJ IDEA</span>
+                <span class="skill-badge">NPM</span>
+                <span class="skill-badge">Angular CLI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-light" id="projetos">
         <div class="container">
           <div class="section-heading">
@@ -207,7 +331,7 @@ require 'assets/include/head.php';
           <div class="project-grid">
             <article class="project-card">
               <a href="https://www.oniun.com.br/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/oniun.webp" alt="Tela do site institucional da Oniun desenvolvido pela Gulini.Dev">
+                <img src="assets/images/oniun.webp" alt="Tela do site institucional da Oniun desenvolvido pela Gulini.Dev" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Site institucional</span>
                   <h3>Oniun</h3>
@@ -217,7 +341,7 @@ require 'assets/include/head.php';
             </article>
             <article class="project-card">
               <a href="https://gulini.com.br/construtora-acredite/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/construtora_acredite.webp" alt="Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev">
+                <img src="assets/images/construtora_acredite.webp" alt="Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Site institucional</span>
                   <h3>Construtora Acredite</h3>
@@ -227,7 +351,7 @@ require 'assets/include/head.php';
             </article>
             <article class="project-card">
               <a href="https://lavanderia-e5a18.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/lavanderia.webp" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev">
+                <img src="assets/images/lavanderia.webp" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Sistema web</span>
                   <h3>Controle de Estoque</h3>
@@ -279,17 +403,18 @@ require 'assets/include/head.php';
         <div class="container">
           <div class="about-layout">
             <div class="about-image">
-              <img src="assets/images/wilian_gulini.webp" alt="Foto de Wilian Gulini, desenvolvedor da Gulini.Dev">
+              <img src="assets/images/wilian_gulini.webp" alt="Foto de Wilian Gulini, desenvolvedor da Gulini.Dev" loading="lazy" decoding="async">
             </div>
             <div class="about-copy">
               <span class="section-kicker">Sobre Wilian Gulini</span>
               <h2>Desenvolvedor com experiência em front-end, back-end e projetos web para empresas</h2>
-              <p>Tenho experiência com Angular, JavaScript, TypeScript, PHP, Java, Spring, MySQL, HTML5, CSS3, Bootstrap, jQuery, WordPress e Git. Minha especialidade é front-end, mas também atuo em back-end e banco de dados quando o projeto exige.</p>
+              <p>Tenho experiência com React.js, Next.js, Angular, TypeScript, JavaScript, PHP, Java, Spring Boot, MySQL, PostgreSQL, HTML5, CSS3, Tailwind CSS, Bootstrap e Git. Minha especialidade é front-end, mas também atuo em back-end, banco de dados e deploy em VPS quando o projeto exige.</p>
               <p>Hoje o foco da Gulini.Dev é desenvolver sites, landing pages e sistemas web com responsividade, organização técnica e SEO quando necessário.</p>
               <div class="contact-links">
                 <a href="mailto:gulini.dev@gmail.com">gulini.dev@gmail.com</a>
                 <a href="https://github.com/wiliangulini" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/wilian-gulini-4aa4391b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="assets/curriculo_atualizado.pdf" target="_blank" rel="noopener noreferrer">Ver currículo</a>
               </div>
             </div>
           </div>
@@ -315,6 +440,18 @@ require 'assets/include/head.php';
             <details>
               <summary>Os projetos incluem SEO?</summary>
               <p>Sites e landing pages podem incluir SEO técnico, como estrutura semântica, metadados, sitemap, canonical, responsividade e organização do conteúdo.</p>
+            </details>
+            <details>
+              <summary>Quanto custa um projeto?</summary>
+              <p>O valor varia conforme o escopo: tipo de projeto, número de páginas, funcionalidades e prazo. Para ter uma estimativa real, envie uma descrição do que precisa e retorno com uma proposta personalizada.</p>
+            </details>
+            <details>
+              <summary>Qual o prazo de entrega?</summary>
+              <p>O prazo depende do escopo e da velocidade de aprovação de conteúdo e feedback. Projetos menores podem ser entregues em poucas semanas; sistemas maiores demandam mais tempo. Prazo e etapas são definidos no início do projeto.</p>
+            </details>
+            <details>
+              <summary>Como é o início do projeto?</summary>
+              <p>Começa com um diagnóstico: entendimento do negócio, objetivos, público, conteúdo disponível e prazo. A partir disso, monta-se a estrutura de páginas, tecnologias e pontos de SEO antes de qualquer linha de código.</p>
             </details>
           </div>
         </div>

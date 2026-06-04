@@ -54,6 +54,14 @@ $projects = [
     'image' => 'assets/images/lavanderia.webp',
     'alt' => 'Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev',
     'url' => 'https://lavanderia-e5a18.firebaseapp.com/'
+  ],
+  [
+    'title' => 'Raquel Manfroi',
+    'type' => 'Site institucional',
+    'summary' => 'Site desenvolvido pela Gulini.Dev para apresentar a profissional, seus serviços e canais de contato.',
+    'image' => 'assets/images/raquelmanfroi.webp',
+    'alt' => 'Tela do site de Raquel Manfroi desenvolvido pela Gulini.Dev',
+    'url' => 'https://github.com/wiliangulini/raquel-manfroi-site'
   ]
 ];
 $structuredData = [
@@ -104,9 +112,10 @@ $structuredData = [
 require 'assets/include/head.php';
 ?>
   <body class="portfolio-page">
+    <a class="skip-to-content" href="#portfolio-main">Ir para o conteúdo</a>
     <?php require 'assets/include/header.php'; ?>
 
-    <main class="page-shell">
+    <main class="page-shell" id="portfolio-main">
       <section class="portfolio-hero">
         <div class="container">
           <span class="section-kicker">Portfólio</span>
@@ -128,7 +137,7 @@ require 'assets/include/head.php';
                   <img src="<?php echo esc($project['image']); ?>" alt="<?php echo esc($project['alt']); ?>" loading="lazy">
                   <div class="portfolio-content">
                     <span><?php echo esc($project['type']); ?></span>
-                    <h2><?php echo esc($project['title']); ?></h2>
+                    <h3><?php echo esc($project['title']); ?></h3>
                     <p><?php echo esc($project['summary']); ?></p>
                   </div>
                 </a>

@@ -1,8 +1,9 @@
 (function () {
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var header = document.querySelector('.site-header');
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.site-header .nav-link'));
   var rotatingText = document.querySelector('.txt-rotate');
-  var words = ['sites.', 'landing pages.', 'sistemas web.', 'Angular.', 'JavaScript.', 'PHP.'];
+  var words = ['sites.', 'landing pages.', 'sistemas web.'];
 
   function sleep(ms) {
     return new Promise(function (resolve) {
@@ -86,7 +87,15 @@
   }
 
   function revealVisibleElements() {
-    var elements = Array.prototype.slice.call(document.querySelectorAll('.service-card, .feature-item, .project-card, .process-step, .about-layout, .faq-list, .contact-panel'));
+    var elements = Array.prototype.slice.call(document.querySelectorAll('.service-card, .skill-card, .feature-item, .project-card, .process-step, .about-layout, .faq-list, .contact-panel'));
+
+    if (prefersReducedMotion) {
+      elements.forEach(function (element) {
+        element.classList.add('fadeInUpNow');
+      });
+      return;
+    }
+
     var viewportBottom = window.scrollY + window.innerHeight;
 
     elements.forEach(function (element) {
@@ -134,5 +143,9 @@
   updateHeaderState();
   revealVisibleElements();
   observeSections();
-  startTypewriter();
+  if (!prefersReducedMotion) {
+    startTypewriter();
+  } else if (rotatingText) {
+    rotatingText.textContent = words[0];
+  }
 })();
