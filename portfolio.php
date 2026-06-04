@@ -1,80 +1,162 @@
-<?php require "assets/include/head.php"; ?>
+<?php
+$currentPage = 'portfolio';
+$whatsappUrl = 'https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho';
+$pageTitle = 'Portfólio de Sites e Sistemas | Gulini.Dev';
+$pageDescription = 'Conheça projetos de sites, landing pages e sistemas desenvolvidos por Wilian Gulini para empresas e negócios digitais.';
+$canonicalUrl = 'https://gulini.com.br/portfolio.php';
+$ogImage = 'https://gulini.com.br/assets/images/construtora_acredite.webp';
+$pageType = 'website';
+$projects = [
+  [
+    'title' => 'Oniun',
+    'type' => 'Site institucional',
+    'summary' => 'Site desenvolvido como freela pela Gulini.Dev para apresentar a marca, serviços e canais de contato.',
+    'image' => 'assets/images/oniun.webp',
+    'alt' => 'Tela do site institucional da Oniun desenvolvido pela Gulini.Dev',
+    'url' => 'https://www.oniun.com.br/'
+  ],
+  [
+    'title' => 'Construtora Acredite',
+    'type' => 'Site institucional',
+    'summary' => 'Site criado para organizar a apresentação da construtora, projetos, serviços e contato comercial.',
+    'image' => 'assets/images/construtora_acredite.webp',
+    'alt' => 'Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev',
+    'url' => 'https://gulini.com.br/construtora-acredite/'
+  ],
+  [
+    'title' => 'CegonhaBox',
+    'type' => 'Site web',
+    'summary' => 'Projeto desenvolvido durante atuação na Engenharia Digital, com foco em experiência visual e responsividade.',
+    'image' => 'assets/images/cegonhabox.webp',
+    'alt' => 'Tela do site da CegonhaBox desenvolvido com participação de Wilian Gulini',
+    'url' => 'https://cegonhabox.com.br/baby/'
+  ],
+  [
+    'title' => 'EliteFM',
+    'type' => 'Site web',
+    'summary' => 'Projeto desenvolvido durante atuação na Engenharia Digital para presença digital e conteúdo online.',
+    'image' => 'assets/images/elitefm.webp',
+    'alt' => 'Tela do site da EliteFM desenvolvido com participação de Wilian Gulini',
+    'url' => 'https://www.elitefm.com.br/'
+  ],
+  [
+    'title' => 'Fronter',
+    'type' => 'Site e portfólios',
+    'summary' => 'Front-end do site e páginas de portfólio desenvolvido durante atuação profissional anterior.',
+    'image' => 'assets/images/fronter.webp',
+    'alt' => 'Tela do site e portfólios da Fronter desenvolvidos com participação de Wilian Gulini',
+    'url' => 'https://fronter.eng.br/'
+  ],
+  [
+    'title' => 'Controle de Estoque',
+    'type' => 'Sistema web',
+    'summary' => 'Sistema interno desenvolvido pela Gulini.Dev com Angular e Spring para controle operacional de lavanderia.',
+    'image' => 'assets/images/lavanderia.webp',
+    'alt' => 'Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev',
+    'url' => 'https://lavanderia-e5a18.firebaseapp.com/'
+  ]
+];
+$structuredData = [
+  [
+    '@context' => 'https://schema.org',
+    '@graph' => [
+      [
+        '@type' => 'BreadcrumbList',
+        '@id' => 'https://gulini.com.br/portfolio.php#breadcrumb',
+        'itemListElement' => [
+          [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Início',
+            'item' => 'https://gulini.com.br/'
+          ],
+          [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'name' => 'Portfólio',
+            'item' => 'https://gulini.com.br/portfolio.php'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'CollectionPage',
+        '@id' => 'https://gulini.com.br/portfolio.php#collection',
+        'url' => 'https://gulini.com.br/portfolio.php',
+        'name' => 'Portfólio de Sites e Sistemas | Gulini.Dev',
+        'description' => $pageDescription,
+        'inLanguage' => 'pt-BR',
+        'isPartOf' => [
+          '@id' => 'https://gulini.com.br/#website'
+        ],
+        'mainEntity' => array_map(function ($project) {
+          return [
+            '@type' => 'CreativeWork',
+            'name' => $project['title'],
+            'description' => $project['summary'],
+            'url' => $project['url'],
+            'image' => 'https://gulini.com.br/' . ltrim($project['image'], '/')
+          ];
+        }, $projects)
+      ]
+    ]
+  ]
+];
+require 'assets/include/head.php';
+?>
+  <body class="portfolio-page">
+    <?php require 'assets/include/header.php'; ?>
 
-<body>
-  <main>
-    <?php require "assets/include/header.php"; ?>
-    <div class="container">
-      <div class="row title mt-5 mb-5">
-        <p class="h1 w-100 text-center font-weight-bold">Todos esses projetos, e vários outros, podem ser encontrados no meu <a target="_blank" href="https://github.com/wiliangulini">github</a></p>
-      </div>
-      <div class="row portfolio mb-5 justify-content-between">
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs0">
-          <a target="_blank" href="https://www.oniun.com.br/">
-            <img src="assets/images/oniun.webp" alt="site da Oniun">
-            <div class="txtCard d-flex flex-column align-items-start">
-              <p class="h5 font-weight-bold">Site da Oniun</p>
-              <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela.</p>
-            </div>
-          </a>
+    <main class="page-shell">
+      <section class="portfolio-hero">
+        <div class="container">
+          <span class="section-kicker">Portfólio</span>
+          <h1>Portfólio de sites e sistemas desenvolvidos pela Gulini.Dev</h1>
+          <p>Uma seleção de projetos reais envolvendo sites institucionais, páginas web e sistemas. Alguns foram feitos pela Gulini.Dev como freela; outros durante experiências profissionais anteriores.</p>
+          <div class="hero-actions">
+            <a class="btn-primary-action" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Pedir orçamento no WhatsApp</a>
+            <a class="btn-secondary-action dark" href="index.php">Voltar para a landing</a>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs1">
-          <a target="_blank" href="https://gulini.com.br/construtora-acredite/">
-            <img src="assets/images/construtora_acredite.webp" alt="site da construtora acredite">
-            <div class="txtCard d-flex flex-column align-items-start">
-              <p class="h5 font-weight-bold">Site da Construtora Acredite</p>
-              <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row portfolio mb-5 justify-content-between">
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs2">
-          <a target="_blank" href="https://cegonhabox.com.br/baby/">
-            <img src="assets/images/cegonhabox.webp" alt="foto do site da CegonhaBox">
-            <div class="txtCard d-flex flex-column align-items-start">
-              <p class="h5 font-weight-bold">Site da CegonhaBox</p>
-              <p class="h6">Desenvolvido por mim enquanto trabalhava pra Engenharia Digital.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs3">
-          <a target="_blank" href="https://www.elitefm.com.br/">
-            <img src="assets/images/elitefm.webp" alt="foto do site da EliteFM">
-            <div class="txtCard d-flex flex-column align-items-start">
-              <p class="h5 font-weight-bold">Site da EliteFM</p>
-              <p class="h6">Desenvolvido por mim enquanto trabalhava pra Engenharia Digital.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row portfolio mb-5 justify-content-between">
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs4">
-          <a target="_blank" href="https://fronter.eng.br/">
-            <img src="assets/images/fronter.webp" alt="foto do site da Fronter">
-            <div class="txtCard fronter d-flex flex-column align-items-start">
-              <p class="h5 font-weight-bold">Site e Portfolios da Fronter</p>
-              <p class="h6">Desenvolvido por mim enquanto trabalhava pro Eyhe.</p>
-            </div>
-          </a>  
-            <p class="h6 pf">Portfólios: <a target="_blank" class="fS" href="https://fronter.eng.br/saneamento/">Saneamento</a>, <a target="_blank" href="https://fronter.eng.br/eletricidade/" class="fEl">Eletricidade</a>, <a target="_blank" class="fEn" href="https://fronter.eng.br/energia/">Energia</a>.</p>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 card" id="imgs5">
-          <a target="_blank" href="https://lavanderia-e5a18.firebaseapp.com/">
-            <img src="assets/images/lavanderia.webp" alt="sistema de controle de estoque de lavanderia.">
-            <div class="txtCard d-flex flex-column align-items-start">
-              <p class="h5 font-weight-bold">Controle de Estoque</p>
-              <p class="h6">Desenvolvido pela empresa Gulini.Dev, como freela. Angular e Spring utilizados</p>
-              <small>contém apenas o link do front-end no firebase pois é apenas pra empresa ter acesso, desenvolvido para desktop a pedido do cliente.</small>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </main>
+      </section>
 
-  <?php require "./assets/include/btn-whats.php"; ?>
+      <section class="section section-light">
+        <div class="container">
+          <div class="portfolio-grid">
+            <?php foreach ($projects as $project): ?>
+              <article class="portfolio-card">
+                <a href="<?php echo esc($project['url']); ?>" target="_blank" rel="noopener noreferrer">
+                  <img src="<?php echo esc($project['image']); ?>" alt="<?php echo esc($project['alt']); ?>" loading="lazy">
+                  <div class="portfolio-content">
+                    <span><?php echo esc($project['type']); ?></span>
+                    <h2><?php echo esc($project['title']); ?></h2>
+                    <p><?php echo esc($project['summary']); ?></p>
+                  </div>
+                </a>
+              </article>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <section class="section contact-section">
+        <div class="container">
+          <div class="contact-panel">
+            <span class="section-kicker">Novo projeto</span>
+            <h2>Quer desenvolver algo parecido para sua empresa?</h2>
+            <p>Envie uma mensagem com o tipo de projeto, objetivo e prazo desejado. Eu retorno com uma direção técnica e comercial para começar.</p>
+            <div class="hero-actions">
+              <a class="btn-primary-action" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Pedir orçamento no WhatsApp</a>
+              <a class="btn-secondary-action" href="mailto:gulini.dev@gmail.com">Enviar e-mail</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <?php require './assets/include/btn-whats.php'; ?>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="assets/js/header.js"></script>
-</body>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
