@@ -1,5 +1,5 @@
 <?php
-$whatsappUrl = 'https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho';
+$whatsappUrl = $whatsappUrl ?? 'https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho';
 ?>
 <a href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer" class="btn-whats" id="btnWhats" aria-label="Pedir orçamento pelo WhatsApp">
   <svg fill="#FFF" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" focusable="false">

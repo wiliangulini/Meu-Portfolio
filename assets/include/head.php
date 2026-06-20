@@ -3,6 +3,9 @@ $pageTitle = $pageTitle ?? 'Gulini.Dev';
 $pageDescription = $pageDescription ?? 'Desenvolvimento de sites, landing pages e sistemas web sob medida para empresas no sudoeste do Paraná.';
 $canonicalUrl = $canonicalUrl ?? 'https://gulini.com.br/';
 $ogImage = $ogImage ?? 'https://gulini.com.br/assets/images/wilian_gulini.webp';
+$ogImageAlt = $ogImageAlt ?? '';
+$ogImageWidth = $ogImageWidth ?? '';
+$ogImageHeight = $ogImageHeight ?? '';
 $pageType = $pageType ?? 'website';
 $structuredData = $structuredData ?? [];
 
@@ -46,6 +49,9 @@ if (!function_exists('is_list_array')) {
     <meta property="og:url" content="<?php echo esc($canonicalUrl); ?>" />
     <meta property="og:site_name" content="Gulini.Dev" />
     <meta property="og:image" content="<?php echo esc($ogImage); ?>" />
+    <?php if ($ogImageAlt !== ''): ?><meta property="og:image:alt" content="<?php echo esc($ogImageAlt); ?>" /><?php endif; ?>
+    <?php if ($ogImageWidth !== ''): ?><meta property="og:image:width" content="<?php echo esc($ogImageWidth); ?>" /><?php endif; ?>
+    <?php if ($ogImageHeight !== ''): ?><meta property="og:image:height" content="<?php echo esc($ogImageHeight); ?>" /><?php endif; ?>
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="<?php echo esc($pageTitle); ?>" />
@@ -53,7 +59,7 @@ if (!function_exists('is_list_array')) {
     <meta name="twitter:image" content="<?php echo esc($ogImage); ?>" />
 
     <link rel="shortcut icon" href="assets/images/gulini.dev.webp" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
@@ -63,7 +69,7 @@ if (!function_exists('is_list_array')) {
       if (!empty($structuredData)) {
         $items = is_list_array($structuredData) ? $structuredData : [$structuredData];
         foreach ($items as $item) {
-          $json = json_encode($item, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+          $json = json_encode($item, JSON_HEX_TAG | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
           if ($json !== false) {
             echo '<script type="application/ld+json">' . $json . '</script>' . PHP_EOL;
           }

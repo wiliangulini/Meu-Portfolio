@@ -5,6 +5,9 @@ $pageTitle = 'Sites, Landing Pages e Sistemas Web no PR | Gulini.Dev';
 $pageDescription = 'Desenvolvimento de sites, landing pages e sistemas sob medida para empresas em Pato Branco, Coronel Vivida e sudoeste do PR. Fale com Wilian Gulini.';
 $canonicalUrl = 'https://gulini.com.br/';
 $ogImage = 'https://gulini.com.br/assets/images/oniun.webp';
+$ogImageAlt = 'Screenshot do site Oniun — projeto web desenvolvido pela Gulini.Dev';
+$ogImageWidth = '1905';
+$ogImageHeight = '909';
 $pageType = 'website';
 $structuredData = [
   [
@@ -474,8 +477,8 @@ require 'assets/include/head.php';
 
     <?php require './assets/include/btn-whats.php'; ?>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -1,9 +1,12 @@
 (function () {
-  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var prefersReducedMotion = motionQuery.matches;
   var header = document.querySelector('.site-header');
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.site-header .nav-link'));
   var rotatingText = document.querySelector('.txt-rotate');
-  var words = ['sites.', 'landing pages.', 'sistemas web.'];
+  var words = ['Sites.', 'Landing Pages.', 'Sistemas Web.'];
+
+  var REVEAL_SELECTORS = '.service-card, .skill-card, .feature-item, .project-card, .process-step, .about-layout, .faq-list, .contact-panel';
 
   function sleep(ms) {
     return new Promise(function (resolve) {
@@ -86,25 +89,35 @@
     });
   }
 
-  function revealVisibleElements() {
-    var elements = Array.prototype.slice.call(document.querySelectorAll('.service-card, .skill-card, .feature-item, .project-card, .process-step, .about-layout, .faq-list, .contact-panel'));
+  function revealAll() {
+    var elements = Array.prototype.slice.call(document.querySelectorAll(REVEAL_SELECTORS));
+    elements.forEach(function (element) {
+      element.classList.add('fadeInUpNow');
+    });
+  }
 
-    if (prefersReducedMotion) {
-      elements.forEach(function (element) {
-        element.classList.add('fadeInUpNow');
-      });
+  function setupRevealObserver() {
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealAll();
       return;
     }
 
-    var viewportBottom = window.scrollY + window.innerHeight;
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadeInUpNow');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -80px 0px',
+      threshold: 0
+    });
 
+    var elements = Array.prototype.slice.call(document.querySelectorAll(REVEAL_SELECTORS));
     elements.forEach(function (element) {
-      if (element.classList.contains('fadeInUpNow')) {
-        return;
-      }
-
-      if (element.getBoundingClientRect().top + window.scrollY < viewportBottom - 80) {
-        element.classList.add('fadeInUpNow');
+      if (!element.classList.contains('fadeInUpNow')) {
+        observer.observe(element);
       }
     });
   }
@@ -135,13 +148,20 @@
     link.addEventListener('click', closeMobileMenu);
   });
 
-  window.addEventListener('scroll', function () {
-    updateHeaderState();
-    revealVisibleElements();
-  }, { passive: true });
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+
+  motionQuery.addEventListener('change', function (e) {
+    prefersReducedMotion = e.matches;
+    if (prefersReducedMotion) {
+      if (rotatingText) {
+        rotatingText.textContent = words[0];
+      }
+      revealAll();
+    }
+  });
 
   updateHeaderState();
-  revealVisibleElements();
+  setupRevealObserver();
   observeSections();
   if (!prefersReducedMotion) {
     startTypewriter();

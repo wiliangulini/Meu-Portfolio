@@ -1,0 +1,245 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#home"
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - navigation [ref=e7]:
+        - link "Página inicial da Gulini.Dev" [ref=e8] [cursor=pointer]:
+          - /url: index.php#home
+          - text: Gulini.Dev
+        - button "Abrir menu" [ref=e9] [cursor=pointer]
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Olá! Eu sou
+          - paragraph [ref=e17]: Wilian Gulini
+          - heading "Desenvolvedor de sites, landing pages e sistemas web" [level=1] [ref=e18]
+          - heading "Especialista em Si|" [level=2] [ref=e19]:
+            - text: Especialista em
+            - generic [ref=e20]: Si|
+          - paragraph [ref=e21]: Desenvolvo sites, landing pages e sistemas web sob medida para empresas em Pato Branco, Coronel Vivida e sudoeste do Paraná.
+          - generic [ref=e22]:
+            - link "Pedir orçamento no WhatsApp" [ref=e23] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+            - link "Ver projetos" [ref=e24] [cursor=pointer]:
+              - /url: "#projetos"
+          - generic "Resumo da experiência da Gulini.Dev" [ref=e25]:
+            - generic [ref=e26]:
+              - strong [ref=e27]: 5 anos
+              - generic [ref=e28]: de experiência
+            - generic [ref=e29]:
+              - strong [ref=e30]: "22"
+              - generic [ref=e31]: projetos completos
+            - generic [ref=e32]:
+              - strong [ref=e33]: PR
+              - generic [ref=e34]: Pato Branco, Coronel Vivida e região
+        - generic:
+          - generic:
+            - img
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]: Serviços
+        - heading "Desenvolvimento para gerar presença, contato e operação" [level=2] [ref=e39]
+        - paragraph [ref=e40]: O trabalho combina interface, código e estrutura de SEO para criar páginas e sistemas que possam ser usados de verdade pelo seu negócio.
+      - generic [ref=e41]:
+        - article [ref=e42]:
+          - text: "01"
+          - heading "Sites institucionais" [level=3] [ref=e43]
+          - paragraph [ref=e44]: Sites responsivos para apresentar sua empresa, serviços, diferenciais e canais de contato com uma estrutura clara para clientes e buscadores.
+          - link "Solicitar orçamento →" [ref=e45] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+        - article [ref=e46]:
+          - text: "02"
+          - heading "Landing pages" [level=3] [ref=e47]
+          - paragraph [ref=e48]: Páginas focadas em captação de leads, campanhas, lançamentos e orçamentos, com CTA bem definido e conteúdo direto ao ponto.
+          - link "Solicitar orçamento →" [ref=e49] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+        - article [ref=e50]:
+          - text: "03"
+          - heading "Sistemas web sob medida" [level=3] [ref=e51]
+          - paragraph [ref=e52]: Soluções para controle interno, estoque, dashboards e automações, usando front-end, back-end e banco de dados conforme a necessidade.
+          - link "Solicitar orçamento →" [ref=e53] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]: Como o projeto é pensado
+        - heading "Menos página bonita sem direção, mais construção com objetivo" [level=2] [ref=e59]
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - heading "SEO técnico desde a base" [level=3] [ref=e62]
+          - paragraph [ref=e63]: Metadados, sitemap, canonical, textos rastreáveis e estrutura semântica entram no projeto desde a implementação.
+        - generic [ref=e64]:
+          - heading "Responsividade e desempenho" [level=3] [ref=e65]
+          - paragraph [ref=e66]: Layouts pensados para mobile e desktop, com imagens otimizadas e navegação objetiva.
+        - generic [ref=e67]:
+          - heading "Entrega alinhada ao negócio" [level=3] [ref=e68]
+          - paragraph [ref=e69]: Antes de codar, a oferta, o público e o fluxo de contato precisam estar claros para a página trabalhar a favor da empresa.
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]: Competências
+        - heading "Front-end como foco, full-stack como capacidade" [level=2] [ref=e74]
+        - paragraph [ref=e75]: Desenvolvedor Front-end com experiência em React.js, Next.js, Angular e TypeScript, também atuando com back-end, banco de dados, deploy em VPS e testes manuais. Desenvolvo sites, landing pages e sistemas web administrativos com foco em performance, responsividade e manutenção.
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - heading "Front-end" [level=3] [ref=e78]
+          - paragraph [ref=e79]: Desenvolvimento de interfaces modernas, responsivas e performáticas com React.js, Next.js, Angular e TypeScript, incluindo consumo de APIs, autenticação, dashboards, formulários complexos e componentização.
+          - generic [ref=e80]:
+            - generic [ref=e81]: React.js
+            - generic [ref=e82]: Next.js
+            - generic [ref=e83]: Angular
+            - generic [ref=e84]: TypeScript
+            - generic [ref=e85]: JavaScript
+            - generic [ref=e86]: HTML5
+            - generic [ref=e87]: CSS3
+            - generic [ref=e88]: Tailwind CSS
+            - generic [ref=e89]: Bootstrap
+            - generic [ref=e90]: Context API
+            - generic [ref=e91]: JWT no front-end
+            - generic [ref=e92]: Dashboards
+            - generic [ref=e93]: Responsividade
+        - generic [ref=e94]:
+          - heading "Back-end" [level=3] [ref=e95]
+          - paragraph [ref=e96]: Experiência no desenvolvimento e integração de APIs REST, autenticação JWT, CRUDs e regras de negócio utilizando Spring Boot, Node.js e PHP.
+          - generic [ref=e97]:
+            - generic [ref=e98]: Java
+            - generic [ref=e99]: Spring Boot
+            - generic [ref=e100]: Node.js
+            - generic [ref=e101]: PHP
+            - generic [ref=e102]: APIs REST
+            - generic [ref=e103]: JWT
+        - generic [ref=e104]:
+          - heading "Banco de Dados" [level=3] [ref=e105]
+          - paragraph [ref=e106]: Modelagem, manutenção e integração com bancos relacionais, incluindo MySQL, PostgreSQL, consultas SQL, migração de dados e relacionamento entre entidades.
+          - generic [ref=e107]:
+            - generic [ref=e108]: MySQL
+            - generic [ref=e109]: PostgreSQL
+            - generic [ref=e110]: SQL
+            - generic [ref=e111]: JPA / Hibernate
+        - generic [ref=e112]:
+          - heading "DevOps / Deploy" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Publicação e manutenção de aplicações web em VPS Linux, com configuração de domínio, SSL, Apache, PM2, proxy reverso e ambientes de produção.
+          - generic [ref=e115]:
+            - generic [ref=e116]: VPS Linux
+            - generic [ref=e117]: Ubuntu Server
+            - generic [ref=e118]: Apache2
+            - generic [ref=e119]: PM2
+            - generic [ref=e120]: SSL / Let's Encrypt
+            - generic [ref=e121]: Proxy reverso
+        - generic [ref=e122]:
+          - heading "QA / Testes" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Atuação com testes manuais, validação de regras de negócio, permissões, autenticação, filtros, dashboards e documentação clara de bugs e cenários de teste.
+          - generic [ref=e125]:
+            - generic [ref=e126]: Testes manuais
+            - generic [ref=e127]: Relatórios de bugs
+            - generic [ref=e128]: RBAC / permissões
+            - generic [ref=e129]: Testes de regressão
+        - generic [ref=e130]:
+          - heading "Ferramentas" [level=3] [ref=e131]
+          - paragraph [ref=e132]: Uso de ferramentas de desenvolvimento, versionamento, deploy, testes de API e manutenção de projetos em ambiente local e produção.
+          - generic [ref=e133]:
+            - generic [ref=e134]: Git
+            - generic [ref=e135]: GitHub
+            - generic [ref=e136]: Azure DevOps
+            - generic [ref=e137]: Postman
+            - generic [ref=e138]: VS Code
+            - generic [ref=e139]: IntelliJ IDEA
+            - generic [ref=e140]: NPM
+            - generic [ref=e141]: Angular CLI
+    - generic [ref=e143]:
+      - generic [ref=e144]:
+        - generic [ref=e145]: Projetos selecionados
+        - heading "Trabalhos que mostram sites, landing pages e sistemas em produção" [level=2] [ref=e146]
+        - paragraph [ref=e147]: Alguns projetos foram desenvolvidos pela Gulini.Dev como freela; outros foram entregas realizadas durante experiências profissionais anteriores.
+      - generic [ref=e148]:
+        - article [ref=e149]:
+          - link "Tela do site institucional da Oniun desenvolvido pela Gulini.Dev Site institucional Oniun Site desenvolvido como freela pela Gulini.Dev para apresentar a marca, serviços e canais de contato." [ref=e150] [cursor=pointer]:
+            - /url: https://www.oniun.com.br/
+            - img "Tela do site institucional da Oniun desenvolvido pela Gulini.Dev" [ref=e151]
+            - generic [ref=e152]:
+              - text: Site institucional
+              - heading "Oniun" [level=3] [ref=e153]
+              - paragraph [ref=e154]: Site desenvolvido como freela pela Gulini.Dev para apresentar a marca, serviços e canais de contato.
+        - article [ref=e155]:
+          - link "Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev Site institucional Construtora Acredite Projeto web para apresentar a construtora, seus serviços, portfólio e formas de contato." [ref=e156] [cursor=pointer]:
+            - /url: https://gulini.com.br/construtora-acredite/
+            - img "Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev" [ref=e157]
+            - generic [ref=e158]:
+              - text: Site institucional
+              - heading "Construtora Acredite" [level=3] [ref=e159]
+              - paragraph [ref=e160]: Projeto web para apresentar a construtora, seus serviços, portfólio e formas de contato.
+        - article [ref=e161]:
+          - link "Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev Sistema web Controle de Estoque Sistema com Angular e Spring criado para uso interno, com foco em organização operacional." [ref=e162] [cursor=pointer]:
+            - /url: https://lavanderia-e5a18.firebaseapp.com/
+            - img "Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" [ref=e163]
+            - generic [ref=e164]:
+              - text: Sistema web
+              - heading "Controle de Estoque" [level=3] [ref=e165]
+              - paragraph [ref=e166]: Sistema com Angular e Spring criado para uso interno, com foco em organização operacional.
+      - link "Ver portfólio completo" [ref=e168] [cursor=pointer]:
+        - /url: portfolio.php
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - generic [ref=e172]: Processo
+        - heading "Um fluxo simples para sair da ideia e chegar na entrega" [level=2] [ref=e173]
+      - generic [ref=e174]:
+        - generic [ref=e175]:
+          - generic [ref=e176]: "1"
+          - heading "Diagnóstico" [level=3] [ref=e177]
+          - paragraph [ref=e178]: Entendimento da empresa, público, objetivo, conteúdo disponível e prioridades do projeto.
+        - generic [ref=e179]:
+          - generic [ref=e180]: "2"
+          - heading "Estrutura" [level=3] [ref=e181]
+          - paragraph [ref=e182]: Definição de páginas, seções, chamadas, tecnologias e pontos essenciais de SEO técnico.
+        - generic [ref=e183]:
+          - generic [ref=e184]: "3"
+          - heading "Desenvolvimento" [level=3] [ref=e185]
+          - paragraph [ref=e186]: Implementação responsiva com revisão visual, ajustes de conteúdo e publicação.
+        - generic [ref=e187]:
+          - generic [ref=e188]: "4"
+          - heading "Validação" [level=3] [ref=e189]
+          - paragraph [ref=e190]: Checagem de links, metadados, sitemap, navegação, WhatsApp, responsividade e experiência final.
+    - generic [ref=e193]:
+      - img "Foto de Wilian Gulini, desenvolvedor da Gulini.Dev" [ref=e195]
+      - generic [ref=e196]:
+        - generic [ref=e197]: Sobre Wilian Gulini
+        - heading "Desenvolvedor com experiência em front-end, back-end e projetos web para empresas" [level=2] [ref=e198]
+        - paragraph [ref=e199]: Tenho experiência com React.js, Next.js, Angular, TypeScript, JavaScript, PHP, Java, Spring Boot, MySQL, PostgreSQL, HTML5, CSS3, Tailwind CSS, Bootstrap e Git. Minha especialidade é front-end, mas também atuo em back-end, banco de dados e deploy em VPS quando o projeto exige.
+        - paragraph [ref=e200]: Hoje o foco da Gulini.Dev é desenvolver sites, landing pages e sistemas web com responsividade, organização técnica e SEO quando necessário.
+        - generic [ref=e201]:
+          - link "gulini.dev@gmail.com" [ref=e202] [cursor=pointer]:
+            - /url: mailto:gulini.dev@gmail.com
+          - link "GitHub" [ref=e203] [cursor=pointer]:
+            - /url: https://github.com/wiliangulini
+          - link "LinkedIn" [ref=e204] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/wilian-gulini-4aa4391b8/
+          - link "Ver currículo" [ref=e205] [cursor=pointer]:
+            - /url: assets/curriculo_atualizado.pdf
+    - generic [ref=e207]:
+      - generic [ref=e208]:
+        - generic [ref=e209]: FAQ
+        - heading "Dúvidas comuns antes de começar" [level=2] [ref=e210]
+      - generic [ref=e211]:
+        - group [ref=e212]:
+          - generic "A Gulini.Dev desenvolve apenas sites?" [ref=e213] [cursor=pointer]
+        - group [ref=e214]:
+          - generic "Vocês atendem empresas fora de Pato Branco e Coronel Vivida?" [ref=e215] [cursor=pointer]
+        - group [ref=e216]:
+          - generic "Os projetos incluem SEO?" [ref=e217] [cursor=pointer]
+        - group [ref=e218]:
+          - generic "Quanto custa um projeto?" [ref=e219] [cursor=pointer]
+        - group [ref=e220]:
+          - generic "Qual o prazo de entrega?" [ref=e221] [cursor=pointer]
+        - group [ref=e222]:
+          - generic "Como é o início do projeto?" [ref=e223] [cursor=pointer]
+    - generic [ref=e226]:
+      - generic [ref=e227]: Contato
+      - heading "Precisa de um site, landing page ou sistema web?" [level=2] [ref=e228]
+      - paragraph [ref=e229]: Envie uma mensagem com o objetivo do projeto, prazo desejado e o que já existe hoje. A partir disso, dá para entender o caminho mais adequado.
+      - generic [ref=e230]:
+        - link "Pedir orçamento no WhatsApp" [ref=e231] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+        - link "Enviar e-mail" [ref=e232] [cursor=pointer]:
+          - /url: mailto:gulini.dev@gmail.com
+  - link "Pedir orçamento pelo WhatsApp" [ref=e233] [cursor=pointer]:
+    - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+    - img [ref=e234]
+    - generic [ref=e236]: WhatsApp

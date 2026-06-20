@@ -1,0 +1,89 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#portfolio-main"
+  - banner [ref=e3]:
+    - navigation [ref=e5]:
+      - link "Página inicial da Gulini.Dev" [ref=e6] [cursor=pointer]:
+        - /url: index.php#home
+        - text: Gulini.Dev
+      - button "Abrir menu" [ref=e7] [cursor=pointer]
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - generic [ref=e14]: Portfólio
+      - heading "Portfólio de sites e sistemas desenvolvidos pela Gulini.Dev" [level=1] [ref=e15]
+      - paragraph [ref=e16]: Uma seleção de projetos reais envolvendo sites institucionais, páginas web e sistemas. Alguns foram feitos pela Gulini.Dev como freela; outros durante experiências profissionais anteriores.
+      - generic [ref=e17]:
+        - link "Pedir orçamento no WhatsApp" [ref=e18] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+        - link "Voltar para a landing" [ref=e19] [cursor=pointer]:
+          - /url: index.php
+    - generic [ref=e22]:
+      - article [ref=e23]:
+        - link "Tela do site institucional da Oniun desenvolvido pela Gulini.Dev Site institucional Oniun Site desenvolvido como freela pela Gulini.Dev para apresentar a marca, serviços e canais de contato." [ref=e24] [cursor=pointer]:
+          - /url: https://www.oniun.com.br/
+          - img "Tela do site institucional da Oniun desenvolvido pela Gulini.Dev" [ref=e25]
+          - generic [ref=e26]:
+            - text: Site institucional
+            - heading "Oniun" [level=3] [ref=e27]
+            - paragraph [ref=e28]: Site desenvolvido como freela pela Gulini.Dev para apresentar a marca, serviços e canais de contato.
+      - article [ref=e29]:
+        - link "Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev Site institucional Construtora Acredite Site criado para organizar a apresentação da construtora, projetos, serviços e contato comercial." [ref=e30] [cursor=pointer]:
+          - /url: https://gulini.com.br/construtora-acredite/
+          - img "Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev" [ref=e31]
+          - generic [ref=e32]:
+            - text: Site institucional
+            - heading "Construtora Acredite" [level=3] [ref=e33]
+            - paragraph [ref=e34]: Site criado para organizar a apresentação da construtora, projetos, serviços e contato comercial.
+      - article [ref=e35]:
+        - link "Tela do site da CegonhaBox desenvolvido com participação de Wilian Gulini Site web CegonhaBox Projeto desenvolvido durante atuação na Engenharia Digital, com foco em experiência visual e responsividade." [ref=e36] [cursor=pointer]:
+          - /url: https://cegonhabox.com.br/baby/
+          - img "Tela do site da CegonhaBox desenvolvido com participação de Wilian Gulini" [ref=e37]
+          - generic [ref=e38]:
+            - text: Site web
+            - heading "CegonhaBox" [level=3] [ref=e39]
+            - paragraph [ref=e40]: Projeto desenvolvido durante atuação na Engenharia Digital, com foco em experiência visual e responsividade.
+      - article [ref=e41]:
+        - link "Tela do site da EliteFM desenvolvido com participação de Wilian Gulini Site web EliteFM Projeto desenvolvido durante atuação na Engenharia Digital para presença digital e conteúdo online." [ref=e42] [cursor=pointer]:
+          - /url: https://www.elitefm.com.br/
+          - img "Tela do site da EliteFM desenvolvido com participação de Wilian Gulini" [ref=e43]
+          - generic [ref=e44]:
+            - text: Site web
+            - heading "EliteFM" [level=3] [ref=e45]
+            - paragraph [ref=e46]: Projeto desenvolvido durante atuação na Engenharia Digital para presença digital e conteúdo online.
+      - article [ref=e47]:
+        - link "Tela do site e portfólios da Fronter desenvolvidos com participação de Wilian Gulini Site e portfólios Fronter Front-end do site e páginas de portfólio desenvolvido durante atuação profissional anterior." [ref=e48] [cursor=pointer]:
+          - /url: https://fronter.eng.br/
+          - img "Tela do site e portfólios da Fronter desenvolvidos com participação de Wilian Gulini" [ref=e49]
+          - generic [ref=e50]:
+            - text: Site e portfólios
+            - heading "Fronter" [level=3] [ref=e51]
+            - paragraph [ref=e52]: Front-end do site e páginas de portfólio desenvolvido durante atuação profissional anterior.
+      - article [ref=e53]:
+        - link "Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev Sistema web Controle de Estoque Sistema interno desenvolvido pela Gulini.Dev com Angular e Spring para controle operacional de lavanderia." [ref=e54] [cursor=pointer]:
+          - /url: https://lavanderia-e5a18.firebaseapp.com/
+          - img "Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" [ref=e55]
+          - generic [ref=e56]:
+            - text: Sistema web
+            - heading "Controle de Estoque" [level=3] [ref=e57]
+            - paragraph [ref=e58]: Sistema interno desenvolvido pela Gulini.Dev com Angular e Spring para controle operacional de lavanderia.
+      - article [ref=e59]:
+        - link "Tela do site de Raquel Manfroi desenvolvido pela Gulini.Dev Site institucional Raquel Manfroi Site desenvolvido pela Gulini.Dev para apresentar a profissional, seus serviços e canais de contato." [ref=e60] [cursor=pointer]:
+          - /url: https://github.com/wiliangulini/raquel-manfroi-site
+          - img "Tela do site de Raquel Manfroi desenvolvido pela Gulini.Dev" [ref=e61]
+          - generic [ref=e62]:
+            - text: Site institucional
+            - heading "Raquel Manfroi" [level=3] [ref=e63]
+            - paragraph [ref=e64]: Site desenvolvido pela Gulini.Dev para apresentar a profissional, seus serviços e canais de contato.
+    - generic [ref=e67]:
+      - generic [ref=e68]: Novo projeto
+      - heading "Quer desenvolver algo parecido para sua empresa?" [level=2] [ref=e69]
+      - paragraph [ref=e70]: Envie uma mensagem com o tipo de projeto, objetivo e prazo desejado. Eu retorno com uma direção técnica e comercial para começar.
+      - generic [ref=e71]:
+        - link "Pedir orçamento no WhatsApp" [ref=e72] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+        - link "Enviar e-mail" [ref=e73] [cursor=pointer]:
+          - /url: mailto:gulini.dev@gmail.com
+  - link "Pedir orçamento pelo WhatsApp" [ref=e74] [cursor=pointer]:
+    - /url: https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho
+    - img [ref=e75]
+    - generic [ref=e77]: WhatsApp
