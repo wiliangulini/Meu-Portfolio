@@ -27,6 +27,22 @@ $projects = [
     'url' => 'https://gulini.com.br/construtora-acredite/'
   ],
   [
+    'title' => 'O Ponto de Partida',
+    'type' => 'Landing page',
+    'summary' => 'Landing page desenvolvida para venda do Método Campeão do Diorran, com foco em apresentação da oferta, conversão e contato.',
+    'image' => 'assets/images/o-ponto-de-partida.webp',
+    'alt' => 'Tela da landing page O Ponto de Partida desenvolvida pela Gulini.Dev',
+    'url' => 'https://o-ponto-de-partida.com/'
+  ],
+  [
+    'title' => 'Rosa de Saron',
+    'type' => 'Sistema web',
+    'summary' => 'Sistema web para floricultura com catálogo de produtos, carrinho, integração com WhatsApp e painel administrativo.',
+    'image' => 'assets/images/rosa-de-saron.webp',
+    'alt' => 'Tela do sistema web Rosa de Saron para floricultura desenvolvido pela Gulini.Dev',
+    'url' => 'https://rosa-de-saron.com/'
+  ],
+  [
     'title' => 'CegonhaBox',
     'type' => 'Site web',
     'summary' => 'Projeto desenvolvido durante atuação na Engenharia Digital, com foco em experiência visual e responsividade.',
