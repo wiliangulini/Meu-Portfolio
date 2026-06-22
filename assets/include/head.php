@@ -37,7 +37,7 @@ if (!function_exists('is_list_array')) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo esc($pageTitle); ?></title>
     <meta name="description" content="<?php echo esc($pageDescription); ?>" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="Wilian Gulini" />
     <meta name="language" content="pt-BR">
     <link rel="canonical" href="<?php echo esc($canonicalUrl); ?>" />

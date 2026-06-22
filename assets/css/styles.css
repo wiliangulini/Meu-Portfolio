@@ -31,6 +31,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a,
@@ -567,7 +568,9 @@ section[id] {
 
 .project-card img,
 .portfolio-card img {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   background: #e8edf5;
@@ -687,6 +690,17 @@ section[id] {
 .contact-panel p {
   color: rgba(255, 255, 255, .78);
   margin-bottom: 26px;
+}
+
+.contact-panel .contact-hint {
+  margin-top: -12px;
+  color: rgba(255, 255, 255, .86);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact-panel .contact-hint strong {
+  color: var(--white);
 }
 
 .page-shell {

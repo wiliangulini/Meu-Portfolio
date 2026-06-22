@@ -1,6 +1,6 @@
 <?php
 $currentPage = 'home';
-$whatsappUrl = 'https://api.whatsapp.com/send?phone=5546991168949&text=Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho';
+$whatsappUrl = 'https://api.whatsapp.com/send?phone=5546991168949&text=Ol%C3%A1%2C%20Wilian%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20um%20site%2C%20landing%20page%20ou%20sistema%20web.%20Posso%20te%20explicar%20minha%20ideia%3F';
 $pageTitle = 'Sites, Landing Pages e Sistemas Web no PR | Gulini.Dev';
 $pageDescription = 'Desenvolvimento de sites, landing pages e sistemas sob medida para empresas em Pato Branco, Coronel Vivida e sudoeste do PR. Fale com Wilian Gulini.';
 $canonicalUrl = 'https://gulini.com.br/';
@@ -39,18 +39,25 @@ $structuredData = [
         ],
         'address' => [
           '@type' => 'PostalAddress',
+          'addressLocality' => 'Pato Branco',
           'addressRegion' => 'PR',
           'addressCountry' => 'BR'
         ],
         'areaServed' => [
           ['@type' => 'City', 'name' => 'Pato Branco'],
           ['@type' => 'City', 'name' => 'Coronel Vivida'],
-          ['@type' => 'AdministrativeArea', 'name' => 'Sudoeste do Paraná']
+          ['@type' => 'AdministrativeArea', 'name' => 'Sudoeste do Paraná'],
+          ['@type' => 'AdministrativeArea', 'name' => 'Paraná'],
+          ['@type' => 'Country', 'name' => 'Brasil']
         ],
         'serviceType' => [
           'Desenvolvimento de sites institucionais',
           'Desenvolvimento de landing pages',
           'Desenvolvimento de sistemas web sob medida',
+          'Front-end com React.js, Next.js e Angular',
+          'Sistemas administrativos e dashboards',
+          'Integrações com APIs',
+          'Deploy e manutenção de aplicações web',
           'SEO técnico para sites'
         ],
         'sameAs' => [
@@ -62,7 +69,7 @@ $structuredData = [
         '@type' => 'Person',
         '@id' => 'https://gulini.com.br/#person',
         'name' => 'Wilian Gulini',
-        'jobTitle' => 'Desenvolvedor de software',
+        'jobTitle' => 'Desenvolvedor Web FullStack',
         'url' => 'https://gulini.com.br/',
         'image' => 'https://gulini.com.br/assets/images/wilian_gulini.webp',
         'sameAs' => [
@@ -87,10 +94,10 @@ $structuredData = [
           ],
           [
             '@type' => 'Question',
-            'name' => 'A Gulini.Dev atende empresas fora de Pato Branco e Coronel Vivida?',
+            'name' => 'Você atende empresas fora de Pato Branco e do Paraná?',
             'acceptedAnswer' => [
               '@type' => 'Answer',
-              'text' => 'Sim. O foco de SEO é regional no sudoeste do Paraná, mas os projetos podem ser conduzidos remotamente com empresas de outras regiões.'
+              'text' => 'Sim. O atendimento pode ser feito remotamente para empresas de todo o Brasil, mantendo foco regional em Pato Branco, Coronel Vivida e sudoeste do Paraná para SEO local.'
             ]
           ],
           [
@@ -124,6 +131,14 @@ $structuredData = [
               '@type' => 'Answer',
               'text' => 'Começa com um diagnóstico: entendimento do negócio, objetivos, público, conteúdo disponível e prazo. A partir disso, monta-se a estrutura de páginas, tecnologias e pontos de SEO antes de qualquer linha de código.'
             ]
+          ],
+          [
+            '@type' => 'Question',
+            'name' => 'O que devo enviar para receber um orçamento?',
+            'acceptedAnswer' => [
+              '@type' => 'Answer',
+              'text' => 'Para agilizar, informe o tipo de projeto (site, landing page ou sistema), o objetivo, o prazo desejado, referências de sites que gosta e o que já existe hoje. Com essas informações, é possível retornar com uma direção técnica e estimativa inicial.'
+            ]
           ]
         ]
       ]
@@ -144,7 +159,7 @@ require 'assets/include/head.php';
             <p class="hero-name">Wilian Gulini</p>
             <h1>Desenvolvedor de sites, landing pages e sistemas web</h1>
             <h2>Especialista em <span class="txt-rotate" aria-live="polite"></span></h2>
-            <p>Desenvolvo sites, landing pages e sistemas web sob medida para empresas em Pato Branco, Coronel Vivida e sudoeste do Paraná.</p>
+            <p>Desenvolvo sites, landing pages e sistemas web sob medida para empresas que precisam apresentar melhor seus serviços, gerar contatos e organizar processos em Pato Branco, Coronel Vivida, sudoeste do Paraná e atendimento remoto.</p>
             <div class="hero-actions">
               <a class="btn-primary-action" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Pedir orçamento no WhatsApp</a>
               <a class="btn-secondary-action" href="#projetos">Ver projetos</a>
@@ -177,7 +192,7 @@ require 'assets/include/head.php';
           <div class="section-heading">
             <span class="section-kicker">Serviços</span>
             <h2>Desenvolvimento para gerar presença, contato e operação</h2>
-            <p>O trabalho combina interface, código e estrutura de SEO para criar páginas e sistemas que possam ser usados de verdade pelo seu negócio.</p>
+            <p>O trabalho combina interface, código, conteúdo objetivo e estrutura de SEO para criar páginas e sistemas que possam ser usados de verdade pelo seu negócio.</p>
           </div>
 
           <div class="service-grid">
@@ -196,7 +211,7 @@ require 'assets/include/head.php';
             <article class="service-card">
               <span>03</span>
               <h3>Sistemas web sob medida</h3>
-              <p>Soluções para controle interno, estoque, dashboards e automações, usando front-end, back-end e banco de dados conforme a necessidade.</p>
+              <p>Soluções para controle interno, estoque, dashboards, integrações com APIs e automações, usando front-end, back-end e banco de dados conforme a necessidade.</p>
               <a class="service-card-cta" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
             </article>
           </div>
@@ -334,31 +349,31 @@ require 'assets/include/head.php';
           <div class="project-grid">
             <article class="project-card">
               <a href="https://www.oniun.com.br/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/oniun.webp" alt="Tela do site institucional da Oniun desenvolvido pela Gulini.Dev" loading="lazy" decoding="async">
+                <img src="assets/images/oniun.webp" alt="Tela do site institucional da Oniun desenvolvido pela Gulini.Dev" width="1905" height="909" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Site institucional</span>
                   <h3>Oniun</h3>
-                  <p>Site desenvolvido como freela pela Gulini.Dev para apresentar a marca, serviços e canais de contato.</p>
+                  <p>Site desenvolvido como freela para apresentar marca, serviços e canais de contato com uma presença digital mais clara.</p>
                 </div>
               </a>
             </article>
             <article class="project-card">
               <a href="https://gulini.com.br/construtora-acredite/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/construtora_acredite.webp" alt="Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev" loading="lazy" decoding="async">
+                <img src="assets/images/construtora_acredite.webp" alt="Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev" width="1902" height="939" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Site institucional</span>
                   <h3>Construtora Acredite</h3>
-                  <p>Projeto web para apresentar a construtora, seus serviços, portfólio e formas de contato.</p>
+                  <p>Projeto web para organizar a apresentação da construtora, seus serviços, portfólio e formas de contato comercial.</p>
                 </div>
               </a>
             </article>
             <article class="project-card">
               <a href="https://lavanderia-e5a18.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/lavanderia.webp" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" loading="lazy" decoding="async">
+                <img src="assets/images/lavanderia.webp" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" width="1918" height="910" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Sistema web</span>
                   <h3>Controle de Estoque</h3>
-                  <p>Sistema com Angular e Spring criado para uso interno, com foco em organização operacional.</p>
+                  <p>Sistema com Angular e Spring criado para apoiar controle interno, organização operacional e consulta de informações.</p>
                 </div>
               </a>
             </article>
@@ -406,13 +421,13 @@ require 'assets/include/head.php';
         <div class="container">
           <div class="about-layout">
             <div class="about-image">
-              <img src="assets/images/wilian_gulini.webp" alt="Foto de Wilian Gulini, desenvolvedor da Gulini.Dev" loading="lazy" decoding="async">
+              <img src="assets/images/wilian_gulini.webp" alt="Foto de Wilian Gulini, desenvolvedor da Gulini.Dev" width="847" height="847" loading="lazy" decoding="async">
             </div>
             <div class="about-copy">
               <span class="section-kicker">Sobre Wilian Gulini</span>
               <h2>Desenvolvedor com experiência em front-end, back-end e projetos web para empresas</h2>
               <p>Tenho experiência com React.js, Next.js, Angular, TypeScript, JavaScript, PHP, Java, Spring Boot, MySQL, PostgreSQL, HTML5, CSS3, Tailwind CSS, Bootstrap e Git. Minha especialidade é front-end, mas também atuo em back-end, banco de dados e deploy em VPS quando o projeto exige.</p>
-              <p>Hoje o foco da Gulini.Dev é desenvolver sites, landing pages e sistemas web com responsividade, organização técnica e SEO quando necessário.</p>
+              <p>Hoje o foco da Gulini.Dev é desenvolver sites, landing pages e sistemas web com responsividade, organização técnica e SEO quando necessário, atendendo empresas da região e projetos remotos em todo o Brasil.</p>
               <div class="contact-links">
                 <a href="mailto:gulini.dev@gmail.com">gulini.dev@gmail.com</a>
                 <a href="https://github.com/wiliangulini" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -437,8 +452,8 @@ require 'assets/include/head.php';
               <p>Não. Além de sites institucionais e landing pages, também desenvolvo sistemas web sob medida com front-end, back-end e banco de dados quando necessário.</p>
             </details>
             <details>
-              <summary>Vocês atendem empresas fora de Pato Branco e Coronel Vivida?</summary>
-              <p>Sim. O foco de SEO é regional no sudoeste do Paraná, mas os projetos podem ser conduzidos remotamente com empresas de outras regiões.</p>
+              <summary>Você atende empresas fora de Pato Branco e do Paraná?</summary>
+              <p>Sim. O atendimento pode ser feito remotamente para empresas de todo o Brasil. O foco regional ajuda no SEO local para Pato Branco, Coronel Vivida e sudoeste do Paraná, mas os projetos podem ser conduzidos online.</p>
             </details>
             <details>
               <summary>Os projetos incluem SEO?</summary>
@@ -456,6 +471,10 @@ require 'assets/include/head.php';
               <summary>Como é o início do projeto?</summary>
               <p>Começa com um diagnóstico: entendimento do negócio, objetivos, público, conteúdo disponível e prazo. A partir disso, monta-se a estrutura de páginas, tecnologias e pontos de SEO antes de qualquer linha de código.</p>
             </details>
+            <details>
+              <summary>O que devo enviar para receber um orçamento?</summary>
+              <p>Para agilizar, informe o tipo de projeto (site, landing page ou sistema), o objetivo, o prazo desejado, referências de sites que gosta e o que já existe hoje. Com essas informações, consigo retornar com uma direção técnica e estimativa inicial.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -466,6 +485,11 @@ require 'assets/include/head.php';
             <span class="section-kicker">Contato</span>
             <h2>Precisa de um site, landing page ou sistema web?</h2>
             <p>Envie uma mensagem com o objetivo do projeto, prazo desejado e o que já existe hoje. A partir disso, dá para entender o caminho mais adequado.</p>
+            <p class="contact-hint">
+              Para agilizar, inclua na mensagem: <strong>tipo de projeto</strong> (site, landing page ou sistema),
+              <strong>objetivo</strong> (gerar contato, vender, organizar operação) e
+              <strong>prazo desejado</strong>.
+            </p>
             <div class="hero-actions">
               <a class="btn-primary-action" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Pedir orçamento no WhatsApp</a>
               <a class="btn-secondary-action" href="mailto:gulini.dev@gmail.com">Enviar e-mail</a>

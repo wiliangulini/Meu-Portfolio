@@ -7,6 +7,98 @@
   var words = ['Sites.', 'Landing Pages.', 'Sistemas Web.'];
 
   var REVEAL_SELECTORS = '.service-card, .skill-card, .feature-item, .project-card, .process-step, .about-layout, .faq-list, .contact-panel';
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+
+  function storeUtms() {
+    if (typeof window.URLSearchParams !== 'function') {
+      return;
+    }
+
+    var search = new URLSearchParams(window.location.search);
+    var utms = {};
+
+    UTM_KEYS.forEach(function (key) {
+      var value = search.get(key);
+
+      if (value) {
+        utms[key] = value;
+      }
+    });
+
+    if (Object.keys(utms).length > 0) {
+      try {
+        sessionStorage.setItem('gulini_utms', JSON.stringify(utms));
+      } catch (error) {}
+    }
+  }
+
+  function getStoredUtms() {
+    try {
+      return JSON.parse(sessionStorage.getItem('gulini_utms') || '{}');
+    } catch (error) {
+      return {};
+    }
+  }
+
+  function trackEvent(name, params) {
+    var data = Object.assign({}, getStoredUtms(), params || {});
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, data);
+    }
+
+    if (window.dataLayer && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push(Object.assign({ event: name }, data));
+    }
+  }
+
+  function setupTracking() {
+    storeUtms();
+
+    document.addEventListener('click', function (event) {
+      if (!event.target || typeof event.target.closest !== 'function') {
+        return;
+      }
+
+      var target = event.target.closest('a');
+
+      if (!target) {
+        return;
+      }
+
+      var href = target.getAttribute('href') || '';
+      var text = (target.textContent || '').trim().substring(0, 80);
+
+      if (href.indexOf('api.whatsapp.com') !== -1 || href.indexOf('wa.me') !== -1) {
+        trackEvent('lead_whatsapp', { link_url: href, link_text: text });
+        return;
+      }
+
+      if (href.indexOf('mailto:') === 0) {
+        trackEvent('lead_email', { link_url: href, link_text: text });
+        return;
+      }
+
+      if (target.closest('.project-card, .portfolio-card')) {
+        trackEvent('project_click', { link_url: href, link_text: text });
+        return;
+      }
+
+      if (href === 'portfolio.php' || href.indexOf('portfolio') !== -1) {
+        trackEvent('portfolio_click', { link_url: href, link_text: text });
+        return;
+      }
+
+      if (href.indexOf('github.com') !== -1 || href.indexOf('linkedin.com') !== -1) {
+        trackEvent('social_click', { link_url: href, link_text: text });
+        return;
+      }
+
+      if (target.closest('header, .site-header, nav')) {
+        trackEvent('nav_click', { link_url: href, link_text: text });
+      }
+    });
+  }
 
   function sleep(ms) {
     return new Promise(function (resolve) {
@@ -160,6 +252,7 @@
     }
   });
 
+  setupTracking();
   updateHeaderState();
   setupRevealObserver();
   observeSections();
