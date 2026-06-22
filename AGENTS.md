@@ -1,289 +1,215 @@
-# AGENTS.md — Regras para Agentes de IA no Projeto Gulini.Dev
+# AGENTS.md
 
-Este arquivo orienta qualquer agente de IA que trabalhe no projeto do portfólio profissional **Gulini.Dev**, disponível em:
+## 1. Objetivo
 
-- Produção: https://gulini.com.br/
-- Repositório: https://github.com/wiliangulini/Meu-Portfolio
-- Branch de trabalho/produção atual: `feature/seo-landing-conversion`
+Este arquivo define regras comuns para agentes de IA que atuarem neste repositório.
 
-## 1. Contexto do projeto
-
-Este projeto é o portfólio profissional e landing page comercial de **Wilian Gulini**, desenvolvedor web/front-end com capacidade full-stack.
-
-O site deve funcionar como:
-
-- portfólio profissional;
-- landing page de serviços;
-- página de aquisição de clientes;
-- base de SEO local;
-- canal de conversão via WhatsApp/e-mail;
-- vitrine de projetos reais;
-- peça central da presença digital da marca Gulini.Dev.
-
-## 2. Stack real do projeto
-
-O projeto atual é baseado em:
-
-- PHP;
-- HTML;
-- CSS;
-- JavaScript;
-- Bootstrap;
-- jQuery;
-- imagens WebP;
-- metadados SEO;
-- JSON-LD/Schema.org;
-- sitemap.xml;
-- robots.txt.
-
-Não assumir que o projeto é Next.js, React, Angular, Laravel ou WordPress.
-
-## 3. Objetivo comercial
-
-O site deve comunicar e vender serviços de:
-
-- criação de sites institucionais;
-- criação de landing pages;
-- desenvolvimento de sistemas web sob medida;
-- front-end com React.js, Next.js e Angular;
-- sistemas administrativos;
-- dashboards;
-- integrações com APIs;
-- deploy e manutenção de aplicações web;
-- SEO técnico para sites e landing pages.
+Aplica-se a:
 
-## 4. Foco de SEO local
+- Claude Code;
+- Codex;
+- ChatGPT;
+- agentes de revisão;
+- agentes de implementação;
+- agentes de documentação;
+- agentes de QA.
 
-O conteúdo deve reforçar, de forma natural:
+O objetivo é padronizar comportamento, reduzir risco e impedir alterações baseadas em suposição.
 
-- Pato Branco;
-- Coronel Vivida;
-- sudoeste do Paraná;
-- Paraná;
-- atendimento remoto para todo o Brasil.
+---
 
-Evitar keyword stuffing. O texto deve ser comercial, natural e útil para o usuário.
+## 2. Regra de entrada
 
-## 5. Regras obrigatórias antes de alterar código
+Antes de qualquer tarefa, o agente deve ler:
 
-Antes de qualquer alteração:
+1. `PROJECT_RULES.md`;
+2. `CLAUDE.md`, quando estiver usando Claude Code;
+3. `README.md`, se existir;
+4. arquivos de configuração;
+5. arquivos diretamente relacionados ao escopo.
 
-1. Confirmar a branch atual.
-2. Ler a estrutura real do projeto.
-3. Identificar os arquivos afetados.
-4. Entender o impacto em SEO, conversão e funcionamento.
-5. Verificar se a alteração é realmente necessária.
-6. Não alterar arquivos fora do escopo.
-7. Não fazer commit.
-8. Não fazer push.
-9. Não fazer deploy.
-10. Não criar branch nova sem autorização explícita.
+O agente deve declarar quais arquivos foram lidos no relatório final.
 
-## 6. Arquivos principais
+---
 
-Arquivos normalmente relevantes:
+## 3. Modos de atuação
 
-- `index.php`;
-- `portfolio.php`;
-- `assets/include/head.php`;
-- `assets/include/header.php`;
-- `assets/include/btn-whats.php`;
-- `assets/css/styles.css`;
-- `assets/js/script.js`;
-- `robots.txt`;
-- `sitemap.xml`;
-- imagens em `assets/images/`.
+### 3.1 Modo implementação
 
-Antes de alterar qualquer um desses arquivos, avaliar impacto em produção.
+O agente pode editar arquivos quando solicitado.
 
-## 7. Regras de SEO técnico
+Obrigatório:
 
-Manter ou melhorar:
+- entender o código antes de editar;
+- propor plano;
+- implementar incrementalmente;
+- preservar padrões existentes;
+- validar com comandos disponíveis;
+- gerar relatório final.
 
-- `<title>` único e estratégico por página;
-- meta description única e comercial;
-- canonical correto;
-- Open Graph;
-- Twitter Card;
-- `robots` meta;
-- `html lang="pt-BR"`;
-- apenas um H1 por página;
-- hierarquia correta de headings;
-- alt text útil em imagens;
-- links externos com `rel="noopener noreferrer"`;
-- links internos funcionais;
-- sitemap.xml com URLs públicas e canônicas;
-- robots.txt permitindo indexação pública;
-- JSON-LD válido e coerente com o conteúdo visível.
+### 3.2 Modo revisão
 
-Não adicionar `noindex`, `nofollow`, bloqueios em robots.txt ou alterações de canonical sem justificativa clara.
+O agente não deve editar arquivos, salvo se o usuário pedir correção.
 
-## 8. Regras de marketing e conversão
+Obrigatório:
 
-O site deve responder rapidamente:
+- ler diff;
+- ler arquivos alterados;
+- comparar com escopo;
+- identificar regressões;
+- classificar achados por severidade;
+- recomendar ou não merge.
 
-- o que Wilian Gulini faz;
-- para quem ele faz;
-- quais problemas resolve;
-- quais serviços vende;
-- por que contratar;
-- quais projetos comprovam experiência;
-- como pedir orçamento;
-- o que enviar no primeiro contato.
+### 3.3 Modo planejamento
 
-Manter CTAs claros para:
+O agente não deve editar arquivos.
 
-- WhatsApp;
-- e-mail;
-- portfólio/projetos;
-- GitHub;
-- LinkedIn.
+Obrigatório:
 
-O CTA principal deve ser comercial e orientado a orçamento.
+- mapear arquitetura;
+- identificar riscos;
+- propor etapas;
+- definir critérios de aceite;
+- sugerir validações.
 
-## 9. WhatsApp
+---
 
-Não alterar o telefone sem autorização explícita.
+## 4. Proibições
 
-A mensagem de WhatsApp deve ser comercial, clara e pré-preenchida, por exemplo:
+Agentes não devem:
 
-> Olá, Wilian! Vi seu portfólio e gostaria de um orçamento para um site, landing page ou sistema web. Posso te explicar minha ideia?
+- inventar estrutura de projeto;
+- inventar APIs;
+- inventar tabelas;
+- inventar scripts;
+- inventar dependências;
+- alterar secrets;
+- executar deploy;
+- fazer push;
+- fazer merge;
+- apagar arquivos em massa;
+- executar comandos destrutivos;
+- modificar banco de dados sem plano;
+- ignorar erro de validação;
+- declarar sucesso sem evidência.
 
-Aplicar a mesma lógica em todos os pontos de contato: home, portfólio e botão flutuante.
+---
 
-## 10. Analytics e eventos
+## 5. Evidência obrigatória
 
-Não inserir ID fictício de GA4 ou GTM.
+Toda conclusão técnica deve se apoiar em evidência:
 
-Se preparar rastreamento, usar abordagem segura:
+- arquivo lido;
+- trecho de código;
+- script encontrado;
+- erro reproduzido;
+- teste executado;
+- build executado;
+- padrão já existente no projeto;
+- documentação oficial quando necessário.
 
-- `gtag` se existir;
-- `dataLayer.push` se existir;
-- fallback sem erro caso nenhum esteja configurado.
+Quando não houver evidência suficiente, o agente deve declarar incerteza.
 
-Eventos recomendados:
+---
 
-- `lead_whatsapp`;
-- `lead_email`;
-- `project_click`;
-- `portfolio_click`;
-- `social_click`;
-- `nav_click`.
+## 6. Critérios para decisões técnicas
 
-Preservar UTMs quando possível:
+Priorizar:
 
-- `utm_source`;
-- `utm_medium`;
-- `utm_campaign`;
-- `utm_content`;
-- `utm_term`.
+1. correção;
+2. segurança;
+3. compatibilidade;
+4. simplicidade;
+5. manutenibilidade;
+6. testabilidade;
+7. performance;
+8. baixo risco;
+9. reversibilidade.
 
-## 11. Schema.org / JSON-LD
+Não priorizar novidade técnica sem necessidade.
 
-Dados estruturados devem refletir conteúdo visível.
+---
 
-Tipos úteis:
+## 7. Refatoração
 
-- `WebSite`;
-- `Person`;
-- `ProfessionalService`;
-- `LocalBusiness`;
-- `Service`;
-- `FAQPage`;
-- `BreadcrumbList`;
-- `CollectionPage`;
-- `CreativeWork`;
-- `ContactPoint`, se aplicável.
+Refatoração só deve ocorrer quando:
 
-Não inventar propriedades, métricas, avaliações, clientes, depoimentos ou resultados.
+- fizer parte do escopo;
+- reduzir risco;
+- remover duplicação relevante;
+- melhorar clareza sem alterar comportamento;
+- for necessária para implementar a tarefa.
 
-## 12. Portfólio e projetos
+Toda refatoração deve preservar comportamento existente.
 
-Os projetos devem ser apresentados com linguagem comercial, não apenas técnica.
+---
 
-Quando possível, cada projeto deve conter:
+## 8. Testes e validação
 
-- nome;
-- tipo;
-- contexto;
-- problema/necessidade;
-- benefício qualitativo;
-- tecnologias;
-- papel de Wilian no projeto;
-- link;
-- imagem;
-- alt text útil.
+O agente deve procurar scripts reais no projeto.
 
-Não adicionar projeto que não esteja realmente no código ou que o usuário não tenha autorizado.
+Exemplos possíveis, dependendo da stack:
 
-## 13. Performance e acessibilidade
+- `npm run lint`;
+- `npm run test`;
+- `npm run build`;
+- `npm run typecheck`;
+- `pnpm test`;
+- `yarn build`;
+- `mvn test`;
+- `./mvnw test`;
+- `./gradlew test`.
 
-Preservar ou melhorar:
+Se não houver testes, o agente deve propor validação manual objetiva.
 
-- imagens WebP;
-- `loading="lazy"` em imagens abaixo da dobra;
-- evitar lazy na imagem principal se prejudicar LCP;
-- `width` e `height` em imagens quando possível;
-- `decoding="async"` quando fizer sentido;
-- contraste;
-- foco de teclado;
-- nomes acessíveis em links;
-- `aria-labels`;
-- semântica das seções;
-- navegação mobile.
+---
 
-Não remover Bootstrap/jQuery apenas por preferência. Só alterar se houver benefício claro e baixo risco.
+## 9. Relatório final
 
-## 14. Proibições
+Todo agente deve finalizar com:
 
-Não fazer:
+```md
+## Relatório final
 
-- prometer primeira posição no Google;
-- criar depoimentos falsos;
-- inventar métricas;
-- inventar clientes;
-- adicionar projetos inexistentes;
-- usar keyword stuffing;
-- adicionar ID fictício de GA4/GTM;
-- quebrar links atuais;
-- remover CTA de WhatsApp;
-- alterar telefone/e-mail sem autorização;
-- alterar `.htaccess` sem necessidade comprovada;
-- refatoração radical sem autorização.
+### Resumo
+...
 
-## 15. Validações recomendadas
+### Arquivos lidos
+...
 
-Após alterações, rodar quando possível:
+### Arquivos alterados
+...
 
-```bash
-php -l index.php
-php -l portfolio.php
-php -l assets/include/head.php
-php -l assets/include/btn-whats.php
-git diff --check
-git diff
+### Decisões técnicas
+...
+
+### Validações executadas
+...
+
+### Riscos
+...
+
+### Pendências
+...
+
+### Recomendações
+...
+
+### Status final
+Aprovado | Aprovado com observações | Requer ajustes | Bloqueado
 ```
 
-Também verificar:
+---
 
-- apenas um H1 por página;
-- WhatsApp com mensagem correta;
-- links externos seguros;
-- sitemap.xml válido;
-- robots.txt permitindo indexação;
-- ausência de `noindex`;
-- ausência de IDs fictícios;
-- JSON-LD sem erro de sintaxe;
-- site visualmente estável.
+## 10. Regra de parada
 
-## 16. Relatório esperado
+O agente deve parar e pedir autorização quando a tarefa envolver:
 
-Ao finalizar qualquer etapa, entregar:
-
-1. resumo executivo;
-2. arquivos alterados;
-3. justificativa técnica;
-4. justificativa de SEO/marketing/conversão;
-5. validações executadas;
-6. riscos restantes;
-7. pendências que dependem do usuário.
+- dados de produção;
+- deploy;
+- credenciais;
+- alteração destrutiva;
+- mudança ampla de arquitetura;
+- alteração de autenticação/autorização;
+- alteração irreversível de banco;
+- escopo ambíguo com alto risco.

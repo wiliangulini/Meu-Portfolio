@@ -1,368 +1,298 @@
-# PROJECT_RULES.md — Regras Oficiais do Projeto Gulini.Dev
+# PROJECT_RULES.md
 
-Este é o arquivo de regras oficiais do projeto **Gulini.Dev**, portfólio profissional e landing page comercial de Wilian Gulini.
+## 1. Objetivo
 
-Qualquer agente de IA, desenvolvedor ou ferramenta automatizada deve seguir este arquivo antes de alterar o projeto.
+Este arquivo define as regras técnicas obrigatórias deste projeto.
 
-## 1. Identificação do projeto
+As regras valem para:
 
-- Nome comercial: Gulini.Dev
-- Domínio em produção: https://gulini.com.br/
-- Repositório: https://github.com/wiliangulini/Meu-Portfolio
-- Branch de trabalho/produção atual: `feature/seo-landing-conversion`
-- Responsável: Wilian Gulini
-- E-mail: gulini.dev@gmail.com
+- desenvolvedores humanos;
+- Claude Code;
+- Codex;
+- ChatGPT;
+- outros agentes de IA;
+- revisores de código.
 
-## 2. Natureza do projeto
+Objetivo: preservar segurança, clareza, qualidade, previsibilidade, manutenibilidade e baixo risco de regressão.
 
-O projeto é:
+---
 
-- portfólio profissional;
-- landing page comercial;
-- vitrine de projetos;
-- canal de aquisição de clientes;
-- base de SEO local;
-- canal de contato por WhatsApp/e-mail.
+## 2. Regra principal
 
-O site deve comunicar autoridade, clareza, confiança e capacidade de entrega.
+Nenhuma alteração deve ser feita sem entender o contexto real do projeto.
 
-## 3. Stack oficial
+Antes de implementar ou revisar:
 
-O projeto atual utiliza:
+1. leia este arquivo;
+2. leia `README.md`, se existir;
+3. identifique a stack real;
+4. identifique scripts disponíveis;
+5. leia arquivos diretamente relacionados ao escopo;
+6. entenda o fluxo afetado;
+7. avalie riscos;
+8. planeje a menor alteração suficiente.
 
-- PHP;
-- HTML;
-- CSS;
-- JavaScript;
-- Bootstrap;
-- jQuery;
-- WebP;
-- JSON-LD;
-- robots.txt;
-- sitemap.xml.
+---
 
-Não migrar para outro framework sem autorização explícita.
+## 3. Escopo
 
-Não assumir Next.js, React, Angular, Laravel ou WordPress.
+Toda tarefa deve respeitar o escopo solicitado.
 
-## 4. Serviços vendidos
+É proibido:
 
-O site deve apresentar com clareza os serviços:
+- alterar arquivos fora do escopo sem necessidade;
+- misturar feature com refatoração ampla;
+- modificar arquitetura sem justificativa;
+- instalar dependências sem aprovação;
+- remover código sem entender impacto;
+- alterar contrato de API sem necessidade;
+- alterar banco sem plano de migration/rollback;
+- alterar autenticação/autorização sem análise;
+- executar deploy sem autorização explícita.
 
-- criação de sites institucionais;
-- criação de landing pages;
-- desenvolvimento de sistemas web sob medida;
-- desenvolvimento front-end;
-- React.js;
-- Next.js;
-- Angular;
-- sistemas administrativos;
-- dashboards;
-- integrações com APIs;
-- deploy e manutenção;
-- SEO técnico.
+---
 
-## 5. Posicionamento regional
+## 4. Git e branch
 
-O SEO e a comunicação devem considerar:
+Antes de iniciar uma tarefa:
 
-- Pato Branco;
-- Coronel Vivida;
-- sudoeste do Paraná;
-- Paraná;
-- atendimento remoto para o Brasil.
+- verificar branch atual;
+- verificar `git status`;
+- evitar trabalhar com alterações desconhecidas;
+- não sobrescrever trabalho existente;
+- não executar `git reset --hard`;
+- não executar `git clean -fd`;
+- não executar `git push` sem autorização explícita;
+- não fazer merge sem autorização explícita.
 
-Usar termos regionais com naturalidade.
+Commits só devem ser criados quando solicitados.
 
-É proibido fazer keyword stuffing.
+---
 
-## 6. Regras de versionamento
+## 5. Padrão de implementação
 
-Não fazer sem autorização explícita:
+Toda implementação deve ser:
 
-- commit;
-- push;
-- deploy;
-- merge;
-- rebase;
-- criação de branch;
-- exclusão de branch;
-- alteração em branch errada.
+- incremental;
+- pequena o suficiente para revisar;
+- compatível com padrões existentes;
+- testável;
+- reversível;
+- simples;
+- segura;
+- coerente com a arquitetura atual.
 
-Antes de qualquer alteração, confirmar a branch atual.
+Prefira:
 
-## 7. Regras de alteração
+- menor mudança suficiente;
+- nomes explícitos;
+- tipagem forte;
+- validação de entrada;
+- tratamento de erro consistente;
+- reaproveitamento de padrões reais do projeto.
+
+Evite:
+
+- overengineering;
+- abstrações prematuras;
+- duplicação desnecessária;
+- lógica de negócio em componentes visuais;
+- lógica de negócio em controllers;
+- acoplamento excessivo;
+- dependências desnecessárias.
+
+---
+
+## 6. Regras de TypeScript/JavaScript
+
+- Evitar `any` sem justificativa.
+- Preferir tipos explícitos em contratos importantes.
+- Não silenciar erro com `// @ts-ignore` sem justificativa.
+- Não esconder erro com `catch` vazio.
+- Não expor secrets no client.
+- Não criar estado derivado desnecessário.
+- Não quebrar compatibilidade com versão configurada do projeto.
+- Respeitar ESLint/Prettier quando existirem.
+
+---
+
+## 7. Regras de Angular
+
+- Respeitar versão do Angular do projeto.
+- Não usar APIs incompatíveis com a versão instalada.
+- Preservar estrutura de modules/components/services.
+- Services devem concentrar integração e lógica reutilizável.
+- Components devem evitar regra de negócio complexa.
+- Verificar templates, SCSS e bindings afetados.
+- Verificar routing antes de alterar navegação.
+- Verificar imports e providers antes de criar novos serviços.
+- Evitar subscriptions sem cleanup em fluxos longos.
+
+---
+
+## 8. Regras de React/Next.js
+
+- Confirmar se o projeto usa App Router ou Pages Router.
+- Respeitar server/client components.
+- Não expor variável sensível com prefixo público.
+- Preservar SEO quando alterar páginas públicas.
+- Evitar hooks condicionais.
+- Evitar efeitos colaterais fora de local adequado.
+- Preservar tipagem de props e retornos.
+- Evitar refatoração visual que altere comportamento sem necessidade.
+
+---
+
+## 9. Regras de Node.js/API
+
+- Validar entrada de dados.
+- Tratar erros de forma consistente.
+- Preservar status codes existentes quando fizer sentido.
+- Não vazar stack trace em produção.
+- Não logar tokens, senhas ou dados sensíveis.
+- Separar controller, service e repository quando esse padrão existir.
+- Preservar contrato de API.
+- Verificar autenticação e autorização em rotas protegidas.
+
+---
+
+## 10. Regras de Java/Spring Boot
+
+- Controllers não devem concentrar regra de negócio.
+- Services devem concentrar regras de aplicação.
+- Repositories devem concentrar acesso a dados.
+- DTOs devem proteger entidades internas quando aplicável.
+- Cuidado com `LazyInitializationException`.
+- Cuidado com N+1 queries.
+- Cuidado com transações.
+- Não alterar entidades persistidas sem avaliar schema e migrations.
+- Preservar compatibilidade com versão de Java/Spring usada.
+
+---
+
+## 11. Regras de banco de dados
+
+Antes de alterar banco:
+
+- identificar banco usado;
+- identificar migrations;
+- identificar entidades/models;
+- identificar tabelas reais;
+- avaliar impacto em dados existentes;
+- propor rollback quando houver risco;
+- evitar comandos destrutivos;
+- não executar `truncate`, `drop` ou `delete` em massa sem autorização explícita.
+
+Alterações em produção exigem plano específico.
+
+---
+
+## 12. Autenticação e autorização
+
+Qualquer alteração em login, sessão, JWT, cookies, RBAC, guards, middleware ou permissões deve ser tratada como área sensível.
 
 Antes de alterar:
 
-1. Ler o arquivo afetado.
-2. Entender o impacto.
-3. Preservar funcionalidades existentes.
-4. Evitar mudanças amplas.
-5. Não alterar arquivos fora do escopo.
-6. Não quebrar rotas/links.
-7. Não alterar dados de contato sem autorização.
-8. Não remover CTA de WhatsApp.
-9. Não remover SEO existente sem substituição melhor.
-10. Não alterar `.htaccess` sem necessidade comprovada.
+- mapear fluxo atual;
+- verificar pontos de entrada;
+- verificar persistência de sessão;
+- verificar proteção de rotas;
+- verificar expiração;
+- verificar impacto em usuários existentes.
 
-## 8. Arquivos principais
+---
 
-Arquivos sensíveis:
+## 13. UI/UX
 
-- `index.php`;
-- `portfolio.php`;
-- `assets/include/head.php`;
-- `assets/include/header.php`;
-- `assets/include/btn-whats.php`;
-- `assets/css/styles.css`;
-- `assets/js/script.js`;
-- `robots.txt`;
-- `sitemap.xml`;
-- imagens em `assets/images/`.
+Alterações visuais devem:
 
-Alterar esses arquivos com cautela.
+- preservar responsividade;
+- preservar acessibilidade básica;
+- evitar quebra em mobile;
+- evitar mudança de fluxo sem necessidade;
+- respeitar padrão visual existente;
+- preservar labels, estados de erro e feedbacks.
 
-## 9. SEO técnico obrigatório
+Para dashboards e sistemas administrativos:
 
-Manter:
+- priorizar clareza;
+- manter ações destrutivas explícitas;
+- evitar ambiguidades;
+- confirmar exclusões quando aplicável.
 
-- title único por página;
-- meta description única;
-- canonical correto;
-- robots meta adequado;
-- Open Graph;
-- Twitter Card;
-- idioma `pt-BR`;
-- H1 único por página;
-- headings semânticos;
-- alt text útil;
-- links internos corretos;
-- links externos seguros;
-- sitemap.xml válido;
-- robots.txt permitindo indexação;
-- JSON-LD válido.
+---
 
-É proibido inserir `noindex`, bloquear o site no robots.txt ou alterar canonical sem justificativa.
+## 14. Validação obrigatória
 
-## 10. Schema.org
+Antes de concluir, executar os comandos disponíveis e relevantes:
 
-Schemas permitidos quando coerentes:
+- lint;
+- typecheck;
+- test;
+- build;
+- testes manuais quando necessário.
 
-- `WebSite`;
-- `Person`;
-- `ProfessionalService`;
-- `LocalBusiness`;
-- `Service`;
-- `FAQPage`;
-- `BreadcrumbList`;
-- `CollectionPage`;
-- `CreativeWork`;
-- `ContactPoint`.
+Nunca inventar comando. Sempre verificar scripts reais em `package.json`, `pom.xml`, `build.gradle`, `mvnw` ou `gradlew`.
 
-O schema deve refletir conteúdo visível.
+Se não houver script disponível, documentar:
 
-É proibido inventar:
+> Não há script X configurado no projeto.
 
-- avaliações;
-- reviews;
-- notas;
-- clientes;
-- métricas;
-- depoimentos;
-- resultados;
-- endereço completo não confirmado.
+Se um comando falhar, documentar:
 
-## 11. Conteúdo e copywriting
+- comando;
+- erro;
+- provável causa;
+- se o erro foi introduzido pela alteração ou já existia.
 
-O texto deve ser:
+---
 
-- claro;
-- comercial;
-- objetivo;
-- confiável;
-- natural;
-- orientado a conversão;
-- útil para o visitante.
+## 15. Secrets e variáveis de ambiente
 
-O site deve responder:
+É proibido:
 
-- o que é oferecido;
-- para quem;
-- quais problemas resolve;
-- quais serviços existem;
-- quais tecnologias são usadas;
-- quais projetos comprovam experiência;
-- como pedir orçamento.
+- commitar `.env`;
+- exibir secrets em logs;
+- inventar valor de secret;
+- alterar secret real sem autorização;
+- usar credencial de produção em teste;
+- mover secret para código fonte.
 
-Não usar linguagem exagerada ou promessas impossíveis.
+Quando uma variável for necessária, documentar apenas nome e finalidade.
 
-## 12. WhatsApp e contato
+---
 
-O WhatsApp é CTA central do site.
+## 16. Deploy/VPS/Linux
 
-Não alterar o número sem autorização.
+Deploy só pode ser executado quando explicitamente solicitado.
 
-A mensagem deve ser pré-preenchida e orientada a orçamento.
+Antes de deploy:
 
-Modelo recomendado:
+- validar build;
+- verificar variáveis de ambiente;
+- verificar processo de rollback;
+- verificar PM2/systemd/Nginx/Apache quando aplicável;
+- verificar SSL/proxy quando aplicável;
+- não reiniciar serviços críticos sem autorização.
 
-> Olá, Wilian! Vi seu portfólio e gostaria de um orçamento para um site, landing page ou sistema web. Posso te explicar minha ideia?
+---
 
-Manter também contato por e-mail.
-
-## 13. Analytics e mensuração
-
-Não adicionar ID fictício de GA4/GTM.
-
-Se implementar eventos, garantir fallback seguro:
-
-- usar `gtag` se existir;
-- usar `dataLayer` se existir;
-- não quebrar se nenhum existir.
-
-Eventos recomendados:
-
-- `lead_whatsapp`;
-- `lead_email`;
-- `project_click`;
-- `portfolio_click`;
-- `social_click`;
-- `nav_click`.
-
-UTMs recomendadas:
-
-- `utm_source`;
-- `utm_medium`;
-- `utm_campaign`;
-- `utm_content`;
-- `utm_term`.
-
-## 14. Portfólio
-
-Projetos devem ser reais e autorizados.
-
-Cada projeto pode conter:
-
-- nome;
-- tipo;
-- resumo;
-- contexto;
-- benefício;
-- tecnologias;
-- papel no projeto;
-- imagem;
-- link.
-
-Não adicionar projetos inexistentes.
-
-Não inventar resultados numéricos.
-
-## 15. Performance
-
-Preservar ou melhorar:
-
-- imagens WebP;
-- carregamento lazy em imagens abaixo da dobra;
-- imagem principal otimizada;
-- `width` e `height` em imagens;
-- `decoding="async"` quando adequado;
-- scripts sem excesso;
-- CSS sem crescimento desnecessário.
-
-Não remover bibliotecas sem validar impacto.
-
-## 16. Acessibilidade
-
-Manter ou melhorar:
-
-- contraste;
-- foco de teclado;
-- alt text;
-- nomes acessíveis em links;
-- aria-labels quando úteis;
-- estrutura semântica;
-- navegação mobile;
-- botões e links compreensíveis.
-
-## 17. Segurança de links
-
-Todo link externo com `target="_blank"` deve conter:
-
-```html
-rel="noopener noreferrer"
-```
-
-Não adicionar scripts externos sem necessidade.
-
-## 18. Validações obrigatórias após alterações
-
-Quando possível, rodar:
-
-```bash
-php -l index.php
-php -l portfolio.php
-php -l assets/include/head.php
-php -l assets/include/btn-whats.php
-git diff --check
-git diff
-```
-
-Verificar também:
-
-- H1 único por página;
-- WhatsApp com mensagem correta;
-- sitemap.xml válido;
-- robots.txt correto;
-- ausência de `noindex`;
-- ausência de ID fictício de GA4/GTM;
-- links externos seguros;
-- JSON-LD sem erro;
-- layout estável.
-
-## 19. Critérios de aceite
-
-Uma alteração só é aceitável se:
-
-- não quebra o site;
-- melhora ou preserva SEO;
-- melhora ou preserva conversão;
-- mantém dados reais;
-- mantém links corretos;
-- preserva identidade visual;
-- não adiciona riscos desnecessários;
-- é validada antes do relatório final.
-
-## 20. Relatório final obrigatório
+## 17. Relatório obrigatório
 
 Toda tarefa deve terminar com relatório contendo:
 
-1. resumo do que foi feito;
-2. arquivos alterados;
-3. motivo técnico;
-4. motivo comercial/SEO;
-5. comandos executados;
-6. resultado das validações;
-7. riscos restantes;
-8. pendências para Wilian;
-9. próximos passos.
+- resumo;
+- arquivos lidos;
+- arquivos alterados;
+- decisões técnicas;
+- validações executadas;
+- riscos;
+- pendências;
+- status final.
 
-## 21. Pendências externas recorrentes
+Status final permitido:
 
-Normalmente dependem de Wilian:
-
-- ID real do GA4 ou GTM;
-- acesso/verificação no Google Search Console;
-- envio do sitemap;
-- criação/otimização do Google Business Profile;
-- coleta de depoimentos reais;
-- criação de imagem Open Graph 1200x630;
-- divulgação no LinkedIn;
-- divulgação na Workana;
-- campanhas com UTM.
-
-## 22. Princípio final
-
-O projeto deve ser simples, rápido, honesto, indexável, acessível e comercialmente forte.
-
-SEO não deve ser tratado como promessa de ranking. SEO deve ser tratado como base técnica, conteúdo claro, autoridade, mensuração e melhoria contínua.
+- `Aprovado`;
+- `Aprovado com observações`;
+- `Requer ajustes`;
+- `Bloqueado`.
