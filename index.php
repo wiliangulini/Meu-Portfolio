@@ -137,7 +137,7 @@ $structuredData = [
             'name' => 'O que devo enviar para receber um orçamento?',
             'acceptedAnswer' => [
               '@type' => 'Answer',
-              'text' => 'Para agilizar, informe o tipo de projeto (site, landing page ou sistema), o objetivo, o prazo desejado, referências de sites que gosta e o que já existe hoje. Com essas informações, é possível retornar com uma direção técnica e estimativa inicial.'
+              'text' => 'Para agilizar, informe o tipo de projeto (site, landing page ou sistema), o objetivo, o prazo desejado, referências de sites que gosta e o que já existe hoje. Com essas informações, consigo retornar com uma direção técnica e estimativa inicial.'
             ]
           ]
         ]
@@ -159,7 +159,7 @@ require 'assets/include/head.php';
             <p class="hero-name">Wilian Gulini</p>
             <h1>Desenvolvedor de sites, landing pages e sistemas web</h1>
             <h2>Especialista em <span class="txt-rotate" aria-live="polite"></span></h2>
-            <p>Desenvolvo sites, landing pages e sistemas web sob medida para empresas que precisam apresentar melhor seus serviços, gerar contatos e organizar processos em Pato Branco, Coronel Vivida, sudoeste do Paraná e atendimento remoto.</p>
+            <p>Desenvolvo sites, landing pages e sistemas web sob medida para empresas em Pato Branco, Coronel Vivida e sudoeste do Paraná — e atendimento remoto para todo o Brasil.</p>
             <div class="hero-actions">
               <a class="btn-primary-action" href="<?php echo esc($whatsappUrl); ?>" target="_blank" rel="noopener noreferrer">Pedir orçamento no WhatsApp</a>
               <a class="btn-secondary-action" href="#projetos">Ver projetos</a>
