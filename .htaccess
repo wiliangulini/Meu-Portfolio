@@ -1,3 +1,7 @@
+# ── Block Dotfiles and Hidden Directories ────────────────────────────────────
+RewriteEngine On
+RewriteRule "(?:^\.(?!well-known(?:/|$))|/\.)" "-" [F]
+
 # ── Security Headers ──────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
