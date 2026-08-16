@@ -355,7 +355,7 @@ require 'assets/include/head.php';
           <div class="project-grid">
             <article class="project-card">
               <a href="https://www.oniun.com.br/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/oniun.webp" alt="Tela do site institucional da Oniun desenvolvido pela Gulini.Dev" width="1905" height="909" loading="lazy" decoding="async">
+                <img src="<?php echo esc(asset_url('assets/images/oniun.webp')); ?>" alt="Tela do site institucional da Oniun desenvolvido pela Gulini.Dev" width="1905" height="909" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Site institucional</span>
                   <h3>Oniun</h3>
@@ -365,7 +365,7 @@ require 'assets/include/head.php';
             </article>
             <article class="project-card">
               <a href="https://gulini.com.br/construtora-acredite/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/construtora_acredite.webp" alt="Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev" width="1902" height="939" loading="lazy" decoding="async">
+                <img src="<?php echo esc(asset_url('assets/images/construtora_acredite.webp')); ?>" alt="Tela do site da Construtora Acredite desenvolvido pela Gulini.Dev" width="1902" height="939" loading="lazy" decoding="async">
                 <div class="project-content">
                   <span>Site institucional</span>
                   <h3>Construtora Acredite</h3>
@@ -374,7 +374,7 @@ require 'assets/include/head.php';
               </a>
             </article>
             <article class="project-card project-card-static">
-              <img src="assets/images/lavanderia.webp" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" width="1918" height="910" loading="lazy" decoding="async">
+              <img src="<?php echo esc(asset_url('assets/images/lavanderia.webp')); ?>" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" width="1918" height="910" loading="lazy" decoding="async">
               <div class="project-content">
                 <span>Sistema web · Em produção</span>
                 <h3>Controle de Estoque</h3>
@@ -425,7 +425,7 @@ require 'assets/include/head.php';
         <div class="container">
           <div class="about-layout">
             <div class="about-image">
-              <img src="assets/images/wilian_gulini.webp" alt="Foto de Wilian Gulini, desenvolvedor da Gulini.Dev" width="847" height="847" loading="lazy" decoding="async">
+              <img src="<?php echo esc(asset_url('assets/images/wilian_gulini.webp')); ?>" alt="Foto de Wilian Gulini, desenvolvedor da Gulini.Dev" width="847" height="847" loading="lazy" decoding="async">
             </div>
             <div class="about-copy">
               <span class="section-kicker">Sobre Wilian Gulini</span>
@@ -507,6 +507,6 @@ require 'assets/include/head.php';
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="<?php echo esc(asset_url('assets/js/script.js')); ?>"></script>
   </body>
 </html>

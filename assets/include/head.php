@@ -28,6 +28,26 @@ if (!function_exists('is_list_array')) {
     return array_keys($array) === range(0, count($array) - 1);
   }
 }
+
+if (!function_exists('asset_url')) {
+  function asset_url($relativePath) {
+    $absolutePath = __DIR__ . '/../../' . ltrim($relativePath, '/');
+
+    if (!is_file($absolutePath)) {
+      error_log('asset_url: arquivo não encontrado, servindo sem versão de cache: ' . $relativePath);
+      return $relativePath;
+    }
+
+    $hash = hash_file('sha256', $absolutePath);
+
+    if ($hash === false) {
+      error_log('asset_url: falha ao calcular hash, servindo sem versão de cache: ' . $relativePath);
+      return $relativePath;
+    }
+
+    return $relativePath . '?v=' . substr($hash, 0, 12);
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -63,7 +83,7 @@ if (!function_exists('is_list_array')) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="<?php echo esc(asset_url('assets/css/styles.css')); ?>" />
 
     <?php
       if (!empty($structuredData)) {
