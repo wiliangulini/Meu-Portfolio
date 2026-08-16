@@ -311,7 +311,8 @@ require 'assets/include/head.php';
 
             <div class="skill-card">
               <h3>Testes e QA</h3>
-              <p>Testes automatizados de unidade, componentes, API e E2E com Vitest, Playwright, Cypress, Node Test Runner e JUnit, cobrindo regras de negócio, autenticação, permissões, concorrência e regressão. Em QA manual: validação de fluxos em web e APK, reprodução de bugs, evidências visuais, severidade e passos de reprodução.</p>
+              <p><strong>Testes automatizados de unidade, componentes, API e E2E</strong> com Vitest, Playwright, Cypress, Node Test Runner e JUnit, cobrindo regras de negócio, autenticação, permissões, concorrência e regressão.</p>
+              <p><strong>Em QA manual:</strong> validação de fluxos em web e APK, reprodução de bugs, evidências visuais, severidade e passos de reprodução.</p>
               <div class="skill-badges">
                 <span class="skill-badge">Vitest</span>
                 <span class="skill-badge">Playwright</span>

@@ -32,7 +32,7 @@ $projects = [
   ],
   [
     'title' => 'O Ponto de Partida',
-    'type' => 'Landing page',
+    'type' => 'Landing page · Em produção',
     'summary' => 'Landing page desenvolvida para apresentar o Método Campeão do Diorran, estruturar a oferta e orientar o visitante para conversão e contato.',
     'image' => 'assets/images/o-ponto-de-partida.webp',
     'width' => '1918',
