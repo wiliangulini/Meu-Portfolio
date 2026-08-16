@@ -62,19 +62,19 @@ $structuredData = [
         ],
         'sameAs' => [
           'https://github.com/wiliangulini',
-          'https://www.linkedin.com/in/wilian-gulini-4aa4391b8/'
+          'https://www.linkedin.com/in/wilian-gulini/'
         ]
       ],
       [
         '@type' => 'Person',
         '@id' => 'https://gulini.com.br/#person',
         'name' => 'Wilian Gulini',
-        'jobTitle' => 'Desenvolvedor Web FullStack',
+        'jobTitle' => 'Desenvolvedor Front-end',
         'url' => 'https://gulini.com.br/',
         'image' => 'https://gulini.com.br/assets/images/wilian_gulini.webp',
         'sameAs' => [
           'https://github.com/wiliangulini',
-          'https://www.linkedin.com/in/wilian-gulini-4aa4391b8/'
+          'https://www.linkedin.com/in/wilian-gulini/'
         ],
         'worksFor' => [
           '@id' => 'https://gulini.com.br/#business'
@@ -166,12 +166,12 @@ require 'assets/include/head.php';
             </div>
             <div class="hero-proof" aria-label="Resumo da experiência da Gulini.Dev">
               <div>
-                <strong>5 anos</strong>
+                <strong>6 anos</strong>
                 <span>de experiência</span>
               </div>
               <div>
-                <strong>22</strong>
-                <span>projetos completos</span>
+                <strong>9</strong>
+                <span>projetos publicados</span>
               </div>
               <div>
                 <strong>PR</strong>
@@ -278,7 +278,7 @@ require 'assets/include/head.php';
               <div class="skill-badges">
                 <span class="skill-badge">Java</span>
                 <span class="skill-badge">Spring Boot</span>
-                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">Node.js (básico)</span>
                 <span class="skill-badge">PHP</span>
                 <span class="skill-badge">APIs REST</span>
                 <span class="skill-badge">JWT</span>
@@ -298,7 +298,7 @@ require 'assets/include/head.php';
 
             <div class="skill-card">
               <h3>DevOps / Deploy</h3>
-              <p>Publicação e manutenção de aplicações web em VPS Linux, com configuração de domínio, SSL, Apache, PM2, proxy reverso e ambientes de produção.</p>
+              <p>Publicação e manutenção de aplicações web em VPS Linux com Apache, proxy reverso, PM2 e SSL/Let's Encrypt. Inclui build de produção, variáveis de ambiente, correção de problemas de API e CORS, backup antes de migration e rollback — aplicado em projetos Next.js com PostgreSQL, Node/Express e Spring Boot com MySQL.</p>
               <div class="skill-badges">
                 <span class="skill-badge">VPS Linux</span>
                 <span class="skill-badge">Ubuntu Server</span>
@@ -310,14 +310,19 @@ require 'assets/include/head.php';
             </div>
 
             <div class="skill-card">
-              <h3>QA / Testes</h3>
-              <p>Atuação com testes manuais, validação de regras de negócio, permissões, autenticação, filtros, dashboards e documentação clara de bugs e cenários de teste.</p>
+              <h3>Testes e QA</h3>
+              <p>Testes automatizados de unidade, componentes, API e E2E com Vitest, Playwright, Cypress, Node Test Runner e JUnit, cobrindo regras de negócio, autenticação, permissões, concorrência e regressão. Em QA manual: validação de fluxos em web e APK, reprodução de bugs, evidências visuais, severidade e passos de reprodução.</p>
               <div class="skill-badges">
+                <span class="skill-badge">Vitest</span>
+                <span class="skill-badge">Playwright</span>
+                <span class="skill-badge">Cypress</span>
+                <span class="skill-badge">JUnit</span>
+                <span class="skill-badge">Testes de API</span>
                 <span class="skill-badge">Testes manuais</span>
                 <span class="skill-badge">Relatórios de bugs</span>
-                <span class="skill-badge">RBAC / permissões</span>
                 <span class="skill-badge">Testes de regressão</span>
               </div>
+              <a class="service-card-cta" href="https://github.com/wiliangulini/floricultura-rosa-de-saron/blob/main/src/lib/whatsapp.test.ts" target="_blank" rel="noopener noreferrer">Ver testes no GitHub →</a>
             </div>
 
             <div class="skill-card">
@@ -367,15 +372,13 @@ require 'assets/include/head.php';
                 </div>
               </a>
             </article>
-            <article class="project-card">
-              <a href="https://lavanderia-e5a18.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/images/lavanderia.webp" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" width="1918" height="910" loading="lazy" decoding="async">
-                <div class="project-content">
-                  <span>Sistema web</span>
-                  <h3>Controle de Estoque</h3>
-                  <p>Sistema com Angular e Spring criado para apoiar controle interno, organização operacional e consulta de informações.</p>
-                </div>
-              </a>
+            <article class="project-card project-card-static">
+              <img src="assets/images/lavanderia.webp" alt="Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev" width="1918" height="910" loading="lazy" decoding="async">
+              <div class="project-content">
+                <span>Sistema web · Em produção</span>
+                <h3>Controle de Estoque</h3>
+                <p>Sistema com Angular 14, Java 17 e Spring Boot criado para apoiar controle interno, organização operacional e consulta de informações. Em produção há anos, com manutenção contínua.</p>
+              </div>
             </article>
           </div>
 
@@ -431,7 +434,7 @@ require 'assets/include/head.php';
               <div class="contact-links">
                 <a href="mailto:gulini.dev@gmail.com">gulini.dev@gmail.com</a>
                 <a href="https://github.com/wiliangulini" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/wilian-gulini-4aa4391b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/wilian-gulini/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="assets/curriculo_atualizado.pdf" target="_blank" rel="noopener noreferrer">Ver currículo</a>
               </div>
             </div>

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REMOTE_USER="root"
-REMOTE_HOST="31.97.160.61"
-REMOTE_PATH="/var/www/html/gulini.com.br/newVersion/"
+REMOTE_USER="${REMOTE_USER:-root}"
+REMOTE_HOST="${REMOTE_HOST:-31.97.160.61}"
+REMOTE_PATH="${REMOTE_PATH:-/var/www/html/gulini.com.br/newVersion/}"
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SOURCE_PATH="${PROJECT_ROOT}/"
 MODE="dry-run"

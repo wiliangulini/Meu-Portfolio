@@ -42,8 +42,8 @@ $projects = [
   ],
   [
     'title' => 'Rosa de Saron',
-    'type' => 'Sistema web',
-    'summary' => 'Sistema web para floricultura com catálogo de produtos, carrinho, integração com WhatsApp e painel administrativo para apoiar a operação.',
+    'type' => 'Sistema web · Em desenvolvimento',
+    'summary' => 'Sistema web para floricultura com catálogo de produtos, carrinho, integração com WhatsApp e painel administrativo para apoiar a operação. Desenvolvido com Next.js, React, TypeScript, Tailwind CSS, Prisma e PostgreSQL.',
     'image' => 'assets/images/rosa-de-saron.webp',
     'width' => '1915',
     'height' => '894',
@@ -82,13 +82,12 @@ $projects = [
   ],
   [
     'title' => 'Controle de Estoque',
-    'type' => 'Sistema web',
-    'summary' => 'Sistema interno desenvolvido pela Gulini.Dev com Angular e Spring para apoiar controle operacional, estoque e consulta de informações.',
+    'type' => 'Sistema web · Em produção',
+    'summary' => 'Sistema interno desenvolvido pela Gulini.Dev com Angular 14, Java 17 e Spring Boot para apoiar controle operacional, estoque e consulta de informações. Em produção há anos, com manutenção contínua.',
     'image' => 'assets/images/lavanderia.webp',
     'width' => '1918',
     'height' => '910',
-    'alt' => 'Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev',
-    'url' => 'https://lavanderia-e5a18.firebaseapp.com/'
+    'alt' => 'Tela do sistema de controle de estoque para lavanderia desenvolvido pela Gulini.Dev'
   ],
   [
     'title' => 'Raquel Manfroi',
@@ -134,13 +133,16 @@ $structuredData = [
           '@id' => 'https://gulini.com.br/#website'
         ],
         'mainEntity' => array_map(function ($project) {
-          return [
+          $item = [
             '@type' => 'CreativeWork',
             'name' => $project['title'],
             'description' => $project['summary'],
-            'url' => $project['url'],
             'image' => 'https://gulini.com.br/' . ltrim($project['image'], '/')
           ];
+          if (!empty($project['url'])) {
+            $item['url'] = $project['url'];
+          }
+          return $item;
         }, $projects)
       ]
     ]
@@ -169,7 +171,9 @@ require 'assets/include/head.php';
         <div class="container">
           <div class="portfolio-grid">
             <?php foreach ($projects as $project): ?>
-              <article class="portfolio-card">
+              <?php $hasUrl = !empty($project['url']); ?>
+              <article class="portfolio-card<?php echo $hasUrl ? '' : ' portfolio-card-static'; ?>">
+                <?php if ($hasUrl): ?>
                 <a href="<?php echo esc($project['url']); ?>" target="_blank" rel="noopener noreferrer">
                   <img src="<?php echo esc($project['image']); ?>" alt="<?php echo esc($project['alt']); ?>" width="<?php echo esc($project['width']); ?>" height="<?php echo esc($project['height']); ?>" loading="lazy" decoding="async">
                   <div class="portfolio-content">
@@ -178,6 +182,14 @@ require 'assets/include/head.php';
                     <p><?php echo esc($project['summary']); ?></p>
                   </div>
                 </a>
+                <?php else: ?>
+                  <img src="<?php echo esc($project['image']); ?>" alt="<?php echo esc($project['alt']); ?>" width="<?php echo esc($project['width']); ?>" height="<?php echo esc($project['height']); ?>" loading="lazy" decoding="async">
+                  <div class="portfolio-content">
+                    <span><?php echo esc($project['type']); ?></span>
+                    <h3><?php echo esc($project['title']); ?></h3>
+                    <p><?php echo esc($project['summary']); ?></p>
+                  </div>
+                <?php endif; ?>
               </article>
             <?php endforeach; ?>
           </div>

@@ -560,6 +560,12 @@ section[id] {
   box-shadow: var(--shadow);
 }
 
+.project-card-static:hover,
+.portfolio-card-static:hover {
+  transform: none;
+  box-shadow: 0 14px 34px rgba(17, 24, 39, .06);
+}
+
 .project-card a:hover,
 .portfolio-card a:hover {
   color: inherit;
